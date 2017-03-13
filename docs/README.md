@@ -1,5 +1,12 @@
 #RoomSurfing
 
+[Heroku link][heroku] 
+
+[Trello link][trello]
+
+[heroku]: http://www.herokuapp.com
+[trello]: https://trello.com/b/s2fyYAsm/roomsurfing
+
 ##MINIMUM VIABLE PRODUCT
 
 RoomSurfing is a web application inspired by Couchsurfing built using Ruby on Rails and React/Redux. By the end of Week 9, this app will, at a minimum, satisfy the following criteria with appropriate bug-free navigation, seed data and CSS styling:
