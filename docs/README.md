@@ -1,6 +1,6 @@
 #RoomSurfing
 
-[Heroku link][heroku] 
+[Heroku link][heroku]
 
 [Trello link][trello]
 
@@ -32,7 +32,7 @@ RoomSurfing is a web application inspired by Couchsurfing built using Ruby on Ra
 [api-endpoints]: docs/api-endpoints.md
 [schema]: docs/schema.md
 
-## Implementation Timeline (13 days including weekend)
+## Implementation Timeline
 
 ### Phase 1: Backend setup and Front End User Authentication (2 days)
 
@@ -55,11 +55,6 @@ the API.
 
 **Objective:** Completed styling and CSS for search and room details pages
 
-### Phase 6: - Adding extra good looking styling to entire app
-
-**Objective:** Making entire app look better
-
 ### Bonus Features (TBD)
 - [ ] Messaging
 - [ ] User/host profiles
-

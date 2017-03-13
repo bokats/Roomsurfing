@@ -40,8 +40,8 @@
     }
   },
   room_details: {
-    1: {
-      title: "Room in guesthouse"
+    { id: 1,
+      title: "Room in guesthouse",
       description: "Beautiful room in our guesthouse with private bath",
       avail_date: 04/17/2017,
       avail_date: 04/20/2017,
@@ -49,12 +49,12 @@
       city: "Paris",
       booked: true
       reviews: {
-	1: {
-	  rating: 5,
-	  comment: "Great room"
-	}
+	      1: {
+      	  rating: 5,
+      	  comment: "Great room"
+	      }
       }
-    }	
+    }
   }
 }
 ```

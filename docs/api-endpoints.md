@@ -33,9 +33,9 @@
 - `GET /api/rooms`
   - Returns all the available rooms for the selected city
   - Takes city as param
-  - Includes the reviews
 - `POST /api/rooms`
 - `GET /api/rooms/:id`
+  - Includes reviews
 - `PATCH /api/rooms/:id`
   - Only if current user_id matches host_id
 - `DELETE /api/rooms/:id`
@@ -44,8 +44,9 @@
 ### Guests
 
 - `GET /api/guests`
-  - Returns all the guests for the current user's avaiable rooms
+  - Returns all the guests for the current user's available rooms
   - Takes room_id as param
 - `DELETE /api/guests/:id`
 
-
+### Reviews
+- `GET /api/rooms/:id/reviews`

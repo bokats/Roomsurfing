@@ -19,9 +19,9 @@ id          | integer   | not null, primary key
 title       | string    | not null
 description | text      | not null
 address     | text      | not null
-avail_start | date   	| not null
+avail_start | date   	  | not null
 avail_end   | date      | not null
-image_url   | string    | not null
+image_url   | text      | not null
 city        | string    | not null
 booked      | boolean   | not null
 host_id     | integer   | not null, foreign key (references users), indexed
@@ -35,7 +35,7 @@ depart_date     | date      | not null
 num_ travellers | integer   | not null
 traveller_id    | integer   | not null, foreign key (references users), indexed
 room_id         | integer   | not null, foreign key (references rooms), indexed
- 
+
 ## guests
 column name | data type | details
 ------------|-----------|-----------------------
@@ -43,7 +43,7 @@ id          | integer   | not null, primary key
 arrival_date| date      | not null
 depart_date | date      | not null
 description | text      | not null
-image_url   | string    | not null
+image_url   | text      | not null
 guest_id    | integer   | not null, foreign key (references users), indexed
 room_id     | integer   | not null, foreign key (references rooms), indexed
 
@@ -55,5 +55,3 @@ rating      | integer   | not null
 comment     | text      | not null
 author_id   | integer   | not null, foreign key (references users), indexed
 room_id     | integer   | not null, foreign key (references rooms), indexed
-
-
