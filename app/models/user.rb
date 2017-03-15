@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
 
   after_initialize :ensure_session_token
+  before_validation :ensure_session_token_uniquenes
 
   attr_reader :password
 
@@ -21,7 +22,7 @@ class User < ApplicationRecord
     self.password_digest = BCrypt::Password.create(password)
   end
 
-  def is_password(password)
+  def is_password?(password)
     BCrypt::Password.new(self.password_digest).is_password?(password)
   end
 
@@ -41,6 +42,6 @@ class User < ApplicationRecord
   end
 
   def ensure_session_token
-    self.sesion_token ||= SecureRandom.base64
+    self.session_token ||= SecureRandom.base64
   end
 end
