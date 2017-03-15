@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: https://roomsurfing.herokuapp.com/#/
 [trello]: https://trello.com/b/s2fyYAsm/roomsurfing
 
 ##MINIMUM VIABLE PRODUCT

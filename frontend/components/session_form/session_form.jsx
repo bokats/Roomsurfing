@@ -31,11 +31,13 @@ class SessionForm extends React.Component {
 		this.props.processForm({user});
 	}
 
-	navLink() {
+	navButton() {
 		if (this.props.formType === "login") {
-			return <Link to="/signup">sign up instead</Link>;
+			return (<button className="redirect-login-button" onClick={() =>
+				hashHistory.push('/login')}>Log In</button>);
 		} else {
-			return <Link to="/login">log in instead</Link>;
+			return (<button className="redirect-signup-button" onClick={() =>
+				hashHistory.push('/signup')}>Join</button>);
 		}
 	}
 
@@ -55,6 +57,10 @@ class SessionForm extends React.Component {
 		let firstName = "";
 		let lastName = "";
 		let homeCity = "";
+		let submitText = "Log In";
+		let message = "Log in to Roomsurfing";
+		let redirectMessage = "Don't have an account?";
+
 		if (this.props.formType === "signup") {
 			firstName = (<label> First Name:
 				<input type="text"
@@ -74,16 +80,17 @@ class SessionForm extends React.Component {
 						value={this.state.home_city}
 						onChange={this.update("home_city")}
 						className="login-input" />
-				</label>
-			);
+				</label>);
+			submitText = "Join";
+			message = "Join Roomsurfing";
+			redirectMessage = "Already a member?";
 		}
 
 		return (
       <div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					Welcome to Roomsurfing
-					<br/>
-					Please {this.props.formType} or {this.navLink()}
+					<p>{message}</p>
+
 					{this.renderErrors()}
 					<div className="login-form">
 						{firstName}
@@ -94,17 +101,17 @@ class SessionForm extends React.Component {
 								onChange={this.update("username")}
 								className="login-input" />
 						</label>
-						<br/>
+
 						<label> Password:
 							<input type="password"
 								value={this.state.password}
 								onChange={this.update("password")}
 								className="login-input" />
 						</label>
-						<br/>
             {homeCity}
-  					<br/>
-						<input type="submit" value="Submit" />
+						<input type="submit" value={submitText} />
+						<p>{redirectMessage}</p>
+						{this.navButton()}
 					</div>
 				</form>
 			</div>

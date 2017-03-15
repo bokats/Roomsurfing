@@ -1,0 +1,43 @@
+.signup-button {
+  width: 134px;
+  height: 22px;
+  background-color: #287fb8;
+  border: 1px solid #287fb8;
+  border-radius: 3px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  position: absolute;
+  right: 12px;
+}
+
+.login-button {
+  border: 1px solid #287fb8;
+  width: 74px;
+  height: 22px;
+  color: #287fb8;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  white-space: normal;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  position: absolute;
+
+}
+
+.login-signup {
+  position: absolute;
+  right: 410px;
+  top: 10px;
+  cursor: pointer;
+}

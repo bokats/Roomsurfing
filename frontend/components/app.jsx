@@ -1,10 +1,10 @@
 import React from 'react';
-import WelcomePageContainer from './welcome_page/welcome_page_container';
+import NavBarContainer from './navbar/navbar_container';
 
 const App = ({ children }) => (
   <div>
-    <header className='header'>
-      <WelcomePageContainer />
+    <header className='header' >
+      <NavBarContainer />
     </header>
     { children }
   </div>
