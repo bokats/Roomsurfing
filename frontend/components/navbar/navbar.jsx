@@ -4,20 +4,38 @@ import { hashHistory } from 'react-router';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSignUpClick = this.handleSignUpClick.bind(this);
+		this.handleLogInClick = this.handleLogInClick.bind(this);
   }
+
+  handleSignUpClick(e) {
+		e.preventDefault();
+		this.props.removeErrors();
+		hashHistory.push('/signup');
+	}
+
+	handleLogInClick(e) {
+		e.preventDefault();
+		this.props.removeErrors();
+		hashHistory.push('/login');
+	}
 
   render() {
     if (this.props.currentUser) {
       var buttons = (
-        <button className="header-button" onClick={this.props.logout}>
+        <button className="logout-button" onClick={this.props.logout}>
           Log Out</button>);
     } else {
       buttons = (
         <div>
-          <button className="signup-button" onClick={() =>
-            hashHistory.push('/signup')}>Join</button>
-          <button className="login-button" onClick={() =>
-            hashHistory.push('/login')}>Log In</button>
+          <button className="signup-button"
+            onClick={this.handleSignUpClick}>Join</button>
+          <button className="login-button"
+            onClick={this.handleLogInClick}>Log In</button>
+          <button className="demo-button"
+            onClick={() => this.props.login(
+              {user: {username: 'bo', password: 'password'}})}> Guest
+          </button>
         </div>
       );
     }

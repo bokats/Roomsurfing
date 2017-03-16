@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router';
+import { Link, withRouter, hashHistory } from 'react-router';
 
 class SessionForm extends React.Component {
 	constructor(props) {
@@ -7,6 +7,8 @@ class SessionForm extends React.Component {
 		this.state = { username: "", password: "", first_name: "",
       last_name: "", home_city: ""};
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleSignUpClick = this.handleSignUpClick.bind(this);
+		this.handleLogInClick = this.handleLogInClick.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -31,19 +33,31 @@ class SessionForm extends React.Component {
 		this.props.processForm({user});
 	}
 
+	handleSignUpClick(e) {
+		e.preventDefault();
+		this.props.removeErrors();
+		hashHistory.push('/signup');
+	}
+
+	handleLogInClick(e) {
+		e.preventDefault();
+		this.props.removeErrors();
+		hashHistory.push('/login');
+	}
+
 	navButton() {
-		if (this.props.formType === "login") {
-			return (<button className="redirect-login-button" onClick={() =>
-				hashHistory.push('/login')}>Log In</button>);
+		if (this.props.formType === "signup") {
+			return (<button className="redirect-form-button"
+			onClick={this.handleLogInClick}>Log In</button>);
 		} else {
-			return (<button className="redirect-signup-button" onClick={() =>
-				hashHistory.push('/signup')}>Join</button>);
+			return (<button className="redirect-form-button"
+			onClick={this.handleSignUpClick}>Join</button>);
 		}
 	}
 
 	renderErrors() {
 		return(
-			<ul>
+			<ul className="login-form-errors">
 				{this.props.errors.map((error, i) => (
 					<li key={`error-${i}`}>
 						{error}
@@ -62,55 +76,62 @@ class SessionForm extends React.Component {
 		let redirectMessage = "Don't have an account?";
 
 		if (this.props.formType === "signup") {
-			firstName = (<label> First Name:
+			firstName = (
 				<input type="text"
+					placeholder="First Name"
 					value={this.state.first_name}
 					onChange={this.update("first_name")}
-					className="login-input" />
-			</label>);
-			lastName = (<label> Last Name:
+					className="first-name-input" />
+				);
+			lastName = (
 				<input type="text"
+					placeholder="Last Name"
 					value={this.state.last_name}
 					onChange={this.update("last_name")}
-					className="login-input" />
-			</label>);
+					className="last-name-input" />
+			);
 			homeCity = (
-				<label> Home City:
-					<input type="text"
-						value={this.state.home_city}
-						onChange={this.update("home_city")}
-						className="login-input" />
-				</label>);
+				<input type="text"
+					placeholder="Home City"
+					value={this.state.home_city}
+					onChange={this.update("home_city")}
+					className="home-city-input" />
+			);
 			submitText = "Join";
 			message = "Join Roomsurfing";
 			redirectMessage = "Already a member?";
+
 		}
 
 		return (
       <div className="login-form-container">
 				<form onSubmit={this.handleSubmit} className="login-form-box">
-					<p>{message}</p>
-
+					<div className="session-form-message-container">
+						<p className="session-form-message">{message}</p>
+					</div>
 					{this.renderErrors()}
-					<div className="login-form">
+
+					<div className="first-last-names">
 						{firstName}
 						{lastName}
-						<label> Email:
-							<input type="text"
-								value={this.state.username}
-								onChange={this.update("username")}
-								className="login-input" />
-						</label>
-
-						<label> Password:
-							<input type="password"
-								value={this.state.password}
-								onChange={this.update("password")}
-								className="login-input" />
-						</label>
-            {homeCity}
-						<input type="submit" value={submitText} />
-						<p>{redirectMessage}</p>
+					</div>
+				
+					<div className="login-form-info">
+						<input type="text"
+							placeholder="Email"
+							value={this.state.username}
+							onChange={this.update("username")}
+							className="email-input" />
+						<input type="password"
+							placeholder="Password"
+							value={this.state.password}
+							onChange={this.update("password")}
+							className="password-input" />
+						{homeCity}
+						<input type="submit" value={submitText} className="submit-button"/>
+					</div>
+					<div className="bottom-message-form">
+						<p className="redirect-message">{redirectMessage}</p>
 						{this.navButton()}
 					</div>
 				</form>
