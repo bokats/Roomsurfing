@@ -69,7 +69,8 @@
 }
 
 .submit-button:hover {
-  background-color: blue;
+  background-color: #2371a3;
+  border: 1px solid #2371a3;
 }
 
 .bottom-message-form {
@@ -103,6 +104,9 @@
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+.redirect-form-button:hover {
+  background-color: #f2f2f2;
+}
 .login-form-errors {
   list-style-type: none;
   background-color: rgba(198,61,67,0.25);
