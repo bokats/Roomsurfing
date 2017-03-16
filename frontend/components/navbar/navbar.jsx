@@ -22,28 +22,25 @@ class NavBar extends React.Component {
 
   render() {
     if (this.props.currentUser) {
-      var buttons = (
+      return (
+      <nav className="main-nav">
         <button className="logout-button" onClick={this.props.logout}>
-          Log Out</button>);
-    } else {
-      buttons = (
-        <div>
+          Log Out</button>
+      </nav>
+    );} else {
+      return (
+        <nav className="main-nav">
           <button className="signup-button"
             onClick={this.handleSignUpClick}>Join</button>
           <button className="login-button"
             onClick={this.handleLogInClick}>Log In</button>
           <button className="demo-button"
-            onClick={() => this.props.login(
+            onClick={() => this.props.loginGuest(
               {user: {username: 'bo', password: 'password'}})}> Guest
           </button>
-        </div>
+        </nav>
       );
     }
-    return (
-      <nav className="login-signup">
-        {buttons}
-      </nav>
-    );
   }
 }
 
