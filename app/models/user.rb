@@ -5,8 +5,6 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
 
   after_initialize :ensure_session_token
-  before_validation :ensure_session_token_uniquenes
-
   attr_reader :password
 
   def self.find_by_credentials(username, password)
@@ -27,19 +25,17 @@ class User < ApplicationRecord
   end
 
   def reset_session_token!
-    self.session_token = SecureRandom.base64
-    ensure_session_token_uniquenes
+    p "resetting session token"
+    begin
+      token = SecureRandom.base64
+    end while User.exists?(session_token: token)
+
+    self.session_token = token
     self.save
     self.session_token
   end
 
   private
-
-  def ensure_session_token_uniquenes
-    while User.find_by(session_token: self.session_token)
-		  self.session_token = SecureRandom.base64
-		end
-  end
 
   def ensure_session_token
     self.session_token ||= SecureRandom.base64

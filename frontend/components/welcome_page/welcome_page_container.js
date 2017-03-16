@@ -3,7 +3,7 @@ import { logout } from '../../actions/session_actions';
 import WelcomePage from './welcome_page';
 
 const mapStateToProps = ({ session }) => ({
-  currentUser: session.currentUser
+  loggedIn: Boolean(session.currentUser)
 });
 
 const mapDispatchToProps = dispatch => ({

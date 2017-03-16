@@ -6,6 +6,7 @@ class NavBar extends React.Component {
     super(props);
     this.handleSignUpClick = this.handleSignUpClick.bind(this);
 		this.handleLogInClick = this.handleLogInClick.bind(this);
+		this.handleLogOutClick = this.handleLogOutClick.bind(this);
   }
 
   handleSignUpClick(e) {
@@ -20,11 +21,16 @@ class NavBar extends React.Component {
 		hashHistory.push('/login');
 	}
 
+  handleLogOutClick(e) {
+    e.preventDefault();
+    this.props.logout().then(() => hashHistory.push("/about"));
+  }
+
   render() {
     if (this.props.currentUser) {
       return (
       <nav className="main-nav">
-        <button className="logout-button" onClick={this.props.logout}>
+        <button className="logout-button" onClick={this.handleLogOutClick}>
           Log Out</button>
       </nav>
     );} else {

@@ -8,7 +8,7 @@ class WelcomePage extends React.Component {
 
   render() {
     return (
-      <p>Test</p>
+      <p>WelcomePage</p>
     );
   }
 }
