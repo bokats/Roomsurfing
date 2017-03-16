@@ -7,11 +7,15 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    return (
-      <div className="dashboard-div">
-        <UserDetails userDetails={this.props.userDetails} />
-      </div>
-    );
+    if (this.props.userDetails) {
+      return (
+        <div className="dashboard-div">
+          <UserDetails userDetails={this.props.userDetails} />
+        </div>
+      );
+    } else {
+      return (<div></div>)
+    }
   }
 
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { hashHistory } from 'react-router';
+import { hashHistory, router } from 'react-router';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -23,7 +23,8 @@ class NavBar extends React.Component {
 
   handleLogOutClick(e) {
     e.preventDefault();
-    this.props.logout().then(() => hashHistory.push("/about"));
+    this.props.logout();
+    hashHistory.push("/about");
   }
 
   render() {

@@ -6,10 +6,20 @@ class WelcomePage extends React.Component {
     super(props);
   }
 
+  // componentWillReceiveProps() {
+  //   if (this.props.loggedIn) {
+  //     hashHistory.push("/");
+  //   }
+  // }
+
   render() {
-    return (
-      <p>WelcomePage</p>
-    );
+    if (!this.props.loggedIn) {
+      return (
+        <p>WelcomePage</p>
+      );
+    } else {
+      return (<div></div>);
+    }
   }
 }
 
