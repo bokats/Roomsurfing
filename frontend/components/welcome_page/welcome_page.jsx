@@ -15,7 +15,7 @@ class WelcomePage extends React.Component {
   render() {
     if (!this.props.loggedIn) {
       return (
-        <p>WelcomePage</p>
+        <div className="welcome-page"></div>
       );
     } else {
       return (<div></div>);

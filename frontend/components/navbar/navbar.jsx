@@ -7,6 +7,7 @@ class NavBar extends React.Component {
     this.handleSignUpClick = this.handleSignUpClick.bind(this);
 		this.handleLogInClick = this.handleLogInClick.bind(this);
 		this.handleLogOutClick = this.handleLogOutClick.bind(this);
+    this.handleGuestClick = this.handleGuestClick.bind(this);
   }
 
   handleSignUpClick(e) {
@@ -23,8 +24,13 @@ class NavBar extends React.Component {
 
   handleLogOutClick(e) {
     e.preventDefault();
-    this.props.logout();
-    hashHistory.push("/about");
+    this.props.logout().then(() => hashHistory.push("/about"));
+  }
+
+  handleGuestClick(e) {
+    e.preventDefault();
+    this.props.loginGuest({user: {username: 'bo', password: 'password'}})
+    .then(() => hashHistory.push("/"))
   }
 
   render() {
@@ -42,8 +48,7 @@ class NavBar extends React.Component {
           <button className="login-button"
             onClick={this.handleLogInClick}>Log In</button>
           <button className="demo-button"
-            onClick={() => this.props.loginGuest(
-              {user: {username: 'bo', password: 'password'}})}> Guest
+            onClick={this.handleGuestClick}> Guest
           </button>
         </nav>
       );

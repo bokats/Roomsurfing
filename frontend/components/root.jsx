@@ -32,7 +32,8 @@ const Root = ({ store }) => {
   return ( <Provider store={ store }>
     <Router history={ hashHistory }>
       <Route path="/" component={ App }>
-        <Route path="/about" component={ WelcomePageContainer }/>
+        <Route path="/about" component={ WelcomePageContainer }
+          onEnter={_redirectIfLoggedIn}/>
         <IndexRoute component={ DashboardContainer }
           onEnter={_redirectIfNotLoggedIn}/>
         <Route path="/login" component={ SessionFormContainer }
