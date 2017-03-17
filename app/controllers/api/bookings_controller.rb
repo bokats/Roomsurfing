@@ -1,0 +1,43 @@
+class Api::BookingsController < ApplicationController
+
+  before_action :require_logged_in
+
+  def index
+    @bookings = Booking.all.where("traveller_id = @current_user.id")
+    render :index
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+    render :show
+  end
+
+  def create
+    @booking = Booking.new(booking_params)
+    @booking.traveller_id = @current_user.id
+    @booking.room_id = params[:id]
+    unless @booking.save
+      render(json: ["Invalid information"], status: 401)
+    end
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    unless @booking.update_attributes(booking_params) &&
+      @current_user.id == @booking.traveller_id
+      render(json: ["Invalid information"], status: 401)
+    end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:arrival_date, :depart_date,
+      :num_travellers)
+  end
+end
