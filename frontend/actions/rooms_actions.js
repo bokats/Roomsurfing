@@ -1,11 +1,10 @@
 import * as RoomApiUtil from '../util/room_api_util';
 import { hashHistory } from "react-router";
+import { receiveRoomErrors, removeRoomErrors } from './errors_actions';
 
 export const RECEIVE_ROOMS = "RECEIVE_ROOMS";
 export const RECEIVE_ROOM = "RECEIVE_ROOM";
 export const REMOVE_ROOM = "REMOVE_ROOM";
-export const RECEIVE_ROOM_ERRORS = "RECEIVE_ROOM_ERRORS";
-export const REMOVE_ROOM_ERRORS = "REMOVE_ROOM_ERRORS";
 
 export const  receiveRooms = rooms => ({
   type: RECEIVE_ROOMS,
@@ -20,15 +19,6 @@ export const receiveRoom = room => ({
 export const removeRoom = room => ({
   type: REMOVE_ROOM,
   room
-});
-
-export const receiveRoomErrors = errors => ({
-  type: RECEIVE_ROOM_ERRORS,
-  errors
-});
-
-export const removeRoomErrors = () => ({
-  type: REMOVE_ROOM_ERRORS
 });
 
 export const fetchRooms = filters => dispatch => (

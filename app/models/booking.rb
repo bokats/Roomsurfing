@@ -29,7 +29,7 @@ class Booking < ApplicationRecord
   def within_avail_dates
     if room.avail_start > arrival_date
       errors.add(:arrival_date, "cannot be before the room is available")
-    elsif room.avail_end > depart_date
+    elsif depart_date > room.avail_end
       errors.add(:departure_date, "cannot be after the room is available")
     end
   end

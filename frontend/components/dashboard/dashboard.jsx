@@ -1,5 +1,6 @@
 import React from 'react';
 import UserDetails from '../user_details/user_details';
+import BookingsContainer from '../bookings/bookings_container';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Dashboard extends React.Component {
       return (
         <div className="dashboard-div">
           <UserDetails userDetails={this.props.userDetails} />
+          <BookingsContainer />
         </div>
       );
     } else {
