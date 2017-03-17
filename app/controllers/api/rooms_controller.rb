@@ -19,7 +19,7 @@ class Api::RoomsController < ApplicationController
     if @room.save
       render :show
     else
-      render(json: ["Invalid information"], status: 401)
+      render(json: ["Invalid information"], status: 422)
     end
   end
 
@@ -29,7 +29,7 @@ class Api::RoomsController < ApplicationController
       @current_user.id == @room.host_id
       render :show
     else
-      render(json: ["Invalid information"], status: 401)
+      render(json: ["Invalid information"], status: 422)
     end
   end
 

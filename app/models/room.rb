@@ -21,14 +21,17 @@ class Room < ApplicationRecord
     :image_url, :city, :host, presence: true
 
   validate :valid_dates?
-  
+
   belongs_to :host,
   primary_key: :id,
   foreign_key: :host_id,
   class_name: :User
 
-  def valid_dates?
-    return false if avail_start >= avail_end
-    avail_start < DateTime.now
+  def valid_dates
+    if avail_start > avail_end
+      errors.add(:start_date, "cannot be after end date")
+    elsif avail_start < DateTime.now
+      errors.add(:start_date, "cannot be in the past")
+    end
   end
 end

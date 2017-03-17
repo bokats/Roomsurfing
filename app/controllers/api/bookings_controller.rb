@@ -17,7 +17,7 @@ class Api::BookingsController < ApplicationController
     @booking.traveller_id = @current_user.id
     @booking.room_id = params[:id]
     unless @booking.save
-      render(json: ["Invalid information"], status: 401)
+      render(json: ["Invalid information"], status: 422)
     end
   end
 
@@ -25,13 +25,15 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     unless @booking.update_attributes(booking_params) &&
       @current_user.id == @booking.traveller_id
-      render(json: ["Invalid information"], status: 401)
+      render(json: ["Invalid information"], status: 422)
     end
   end
 
   def destroy
     @booking = Booking.find(params[:id])
-    @booking.destroy
+    unless @booking.destroy
+      render(json: ["Nothing to delete"], status: 422)
+    end
   end
 
   private

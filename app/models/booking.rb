@@ -13,10 +13,11 @@
 #
 
 class Booking < ApplicationRecord
-  validates :arrival_date, :depart_date, :num_travellers, :traveller,
-    :room, presence: true
+  validates :arrival_date, :depart_date, :num_travellers, :traveller, :room,
+    presence: true
 
   validate :valid_dates?
+  validate :within_avail_dates
 
   belongs_to :traveller,
   primary_key: :id,
@@ -25,8 +26,19 @@ class Booking < ApplicationRecord
 
   belongs_to :room
 
+  def within_avail_dates
+    if room.avail_start > arrival_date
+      errors.add(:arrival_date, "cannot be before the room is available")
+    elsif room.avail_end > depart_date
+      errors.add(:departure_date, "cannot be after the room is available")
+    end
+  end
+
   def valid_dates?
-    return false if arrival_date >= depart_date
-    arrival_date < DateTime.now
+    if arrival_date > depart_date
+      errors.add(:arrival_date, "cannot be before departure date")
+    elsif arrival_date < DateTime.now
+      errors.add(:arrival_date, "can only be in the future")
+    end
   end
 end
