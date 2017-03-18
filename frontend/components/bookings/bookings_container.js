@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Bookings from './bookings';
-import { fetchBookings, deleteBooking }
+import { fetchBookings, deleteBooking, updateBooking }
   from '../../actions/bookings_actions';
 
 const mapStateToProps = state => ({

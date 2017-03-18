@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
+import { updateBooking } from './actions/bookings_actions';
+
+window.updateBooking = updateBooking;
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;

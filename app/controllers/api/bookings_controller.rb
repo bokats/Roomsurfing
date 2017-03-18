@@ -16,15 +16,19 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.traveller_id = @current_user.id
     @booking.room_id = params[:id]
-    unless @booking.save
+    if @booking.save
+      render :show
+    else
       render(json: ["Invalid information"], status: 422)
     end
   end
 
   def update
     @booking = Booking.find(params[:id])
-    unless @booking.update_attributes(booking_params) &&
+    if @booking.update_attributes(booking_params) &&
       @current_user.id == @booking.traveller_id
+      render :show
+    else
       render(json: ["Invalid information"], status: 422)
     end
   end

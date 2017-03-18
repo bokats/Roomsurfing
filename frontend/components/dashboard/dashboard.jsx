@@ -11,8 +11,12 @@ class Dashboard extends React.Component {
     if (this.props.userDetails) {
       return (
         <div className="dashboard-div">
-          <UserDetails userDetails={this.props.userDetails} />
-          <BookingsContainer />
+          <div className="dashboard-left-container">
+            <UserDetails userDetails={this.props.userDetails} />
+          </div>
+          <div className="dashboard-right-container">
+            <BookingsContainer />
+          </div>
         </div>
       );
     } else {

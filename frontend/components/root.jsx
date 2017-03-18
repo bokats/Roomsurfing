@@ -5,6 +5,7 @@ import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import WelcomePageContainer from "./welcome_page/welcome_page_container";
 import DashboardContainer from "./dashboard/dashboard_container";
+import BookingFormContainer from './bookings/booking_form_container';
 
 const Root = ({ store }) => {
 
@@ -36,6 +37,9 @@ const Root = ({ store }) => {
           onEnter={_redirectIfLoggedIn}/>
         <IndexRoute component={ DashboardContainer }
           onEnter={_redirectIfNotLoggedIn}/>
+          <Route path='/editbooking/:bookingId'
+            component={BookingFormContainer}
+            onEnter={_redirectIfNotLoggedIn}/>
         <Route path="/login" component={ SessionFormContainer }
           onEnter={_redirectIfLoggedIn}/>
         <Route path="/signup" component={ SessionFormContainer }
