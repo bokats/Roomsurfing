@@ -6,6 +6,7 @@ class BookingForm extends React.Component {
     super(props);
     this.state = this.props.booking;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCancelClick = this.handleCancelClick.bind(this);
   }
 
   componentDidMount() {
@@ -24,6 +25,11 @@ class BookingForm extends React.Component {
     };
   }
 
+  handleCancelClick(e) {
+    e.preventDefault();
+    hashHistory.push('/');
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const newBooking = {
@@ -36,23 +42,38 @@ class BookingForm extends React.Component {
   }
 
   render() {
-
     return (
-      <div className="edit-booking-form-container">
-        <form className="edit-booking-form" onSubmit={this.handleSubmit}>
-          <label> Arrival Date
-            <input type="date" onChange={this.update('arrival_date')}
-              value={this.state.arrival_date}/>
-          </label>
-          <label> Departure Date
-            <input type="date" onChange={this.update('depart_date')}
-              value={this.state.depart_date}/>
-          </label>
-          <label>
-            <input type="text" onChange={this.update('num_travellers')}
-              value={this.state.num_travellers}/>
-          </label>
-          <input type="submit" value="Edit Booking"/>
+      <div className="booking-form-container">
+        <section className="booking-form-message-container">
+          <p className="booking-form-message">EDIT MY BOOKING</p>
+        </section>
+        <form className="booking-form" onSubmit={this.handleSubmit}>
+          <section className="booking-form-content">
+            <section className="booking-form-date-section">
+              <label className='arrival-date-label'> Arrival Date
+                <input className='booking-form-arrival-date'
+                  type="date" onChange={this.update('arrival_date')}
+                  value={this.state.arrival_date}/>
+              </label>
+              <label className='departure-date-label'> Departure Date
+                <input className='booking-form-departure-date'
+                  type="date" onChange={this.update('depart_date')}
+                  value={this.state.depart_date}/>
+              </label>
+            </section>
+            <label className='travellers-label'> Number of Travellers
+              <input className='booking-form-travellers'type="text" onChange={this.update('num_travellers')}
+                value={this.state.num_travellers}
+                placeholder="Number of travellers"/>
+            </label>
+          </section>
+          <section className="booking-form-buttons">
+            <input className='booking-form-submit-button'
+              type="submit" value="Save"/>
+            <button onClick={this.handleCancelClick}>
+              Cancel
+            </button>
+          </section>
         </form>
       </div>
   );

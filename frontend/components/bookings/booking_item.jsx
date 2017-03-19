@@ -16,33 +16,40 @@ class BookingItem extends React.Component {
   }
 
   render() {
+    let traveller = "traveler";
+    if (this.props.booking.num_travellers > 1) {
+      traveller = "travellers";
+    }
+
+
 
     return (
-      <div>
-        <li className="booking-item">
-          {this.props.booking.city}
-          <br></br>
-          {this.props.booking.title}
-          <br></br>
-          Dates: {this.props.booking.arrival_date} -
-          {this.props.booking.depart_date}
-          <br></br>
-          {this.props.booking.num_travellers}
-          <br></br>
-          {this.props.booking.host_first_name}
-          <br></br>
-          {this.props.booking.host_last_name}
-          <div className="booking-buttons">
+      <section className="booking">
+        <section className='booking-city'>
+          <p>{this.props.booking.city}</p>
+        </section>
+        <section className="booking-content">
+          <section className="booking-info">
+            <p className="booking-title">{this.props.booking.title}</p>
+            <p className="booking-host-name">Hosted by: {this.props.booking.host_first_name} {this.props.booking.host_last_name}</p>
+            <ul className="dates-travellers-ul">
+              <li className="booking-dates">
+                {this.props.booking.arrival_date} to {this.props.booking.depart_date}
+              </li>
+              <li className="booking-num-travellers">
+                {this.props.booking.num_travellers} {traveller}</li>
+            </ul>
+          </section>
+          <section className="booking-buttons">
             <button className="edit-booking-button"
               onClick={this.handleEditClick(this.props.booking.id)}>
-              Edit Booking</button>
+              Edit</button>
             <button className="delete-booking-button"
               onClick={() => this.props.deleteBooking(this.props.booking.id)}
-              >Delete Booking</button>
-          </div>
-        </li>
-      </div>
-
+              >Cancel</button>
+          </section>
+        </section>
+      </section>
     );
   }
 }

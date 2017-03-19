@@ -1,0 +1,64 @@
+.booking-form-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 502px;
+}
+
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-form-message-container {
+  font-weight: bold;
+  color: #929ead;
+  padding-left: 20px;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  background-color: #ecf0f1;
+}
+
+.booking-form-content {
+  border-bottom: 1px solid #bfcad2;
+  padding-left: 20px;
+}
+
+.booking-form-message {
+  visibility: visible;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.booking-form-date-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 27px;
+  justify-content: space-between;
+}
+
+.booking-form-arrival-date, .booking-form-departure-date, .booking-form-travellers   {
+  padding: 2px 2px;
+  border: 1px solid #aeb5ba;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+.booking-form-travellers {
+  font-weight: normal;
+  width: 99px;
+}
+
+.arrival-date-label, .departure-date-label, .travellers-label {
+  font-weight: bold;
+  color: #27374c;
+}
+
+.travellers-label {
+  display: flex;
+  flex-direction: column;
+  margin-top: 21px;
+}

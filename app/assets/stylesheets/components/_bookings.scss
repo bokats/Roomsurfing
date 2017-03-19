@@ -1,0 +1,97 @@
+.booking {
+  border-bottom: 1px solid #bfcad2;
+}
+
+.bookings-index {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  background-color: white;
+  color: #27374c;
+}
+
+.bookings-header {
+  display: flex;
+  align-items: center;
+  height: 66px;
+  width: 952px;
+  border-bottom: 1px solid #bfcad2;
+  vertical-align: middle;
+  padding-left: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.bookings-list {
+  list-style-type: none;
+}
+
+.booking-city {
+  display: flex;
+  align-items: center;
+  // border: 1px solid red;
+  height: 42px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #eceff2;
+  border-bottom: 1px solid #bfcad2;
+}
+
+.booking-content {
+  display: flex;
+  padding-left: 20px;
+  padding-top: 35px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.booking-info {
+  margin-bottom: 32px;
+}
+.booking-title {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.booking-host-name {
+  margin-top: 27px;
+}
+
+.dates-travellers-ul {
+  list-style-type: disc;
+  margin-left: 17px;
+  margin-top: 30px;
+}
+
+.booking-buttons {
+  display: flex;
+  // border: 1px solid green;
+  flex-direction: column;
+  margin-right: 20px;
+  justify-content: space-between;
+  height: 120px;
+}
+
+.edit-booking-button, .delete-booking-button {
+  border: 1px solid $light-blue;
+  width: 241px;
+  background-color: $light-blue;
+  border: 1px solid #287fb8;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.no-bookings {
+  display: flex;
+  align-items: center;
+  height: 85px;
+  color: #929dad;
+  border-bottom: 1px solid #bfcad2;
+  justify-content: center;
+  background-color: #fbfcfc;
+}

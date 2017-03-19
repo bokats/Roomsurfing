@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import BookingForm from './booking_form';
-import { fetchBooking, updateBooking }
+import { fetchBooking, fetchBookings, updateBooking }
   from '../../actions/bookings_actions';
 
 const mapStateToProps = (state, ownProps) => {
