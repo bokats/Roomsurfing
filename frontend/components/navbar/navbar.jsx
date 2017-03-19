@@ -30,16 +30,28 @@ class NavBar extends React.Component {
   handleGuestClick(e) {
     e.preventDefault();
     this.props.loginGuest({user: {username: 'bo', password: 'password'}})
-    .then(() => hashHistory.push("/"))
+    .then(() => hashHistory.push("/"));
   }
 
   render() {
     if (this.props.currentUser) {
       return (
-      <nav className="main-nav">
-        <button className="logout-button" onClick={this.handleLogOutClick}>
-          Log Out</button>
-      </nav>
+
+        <nav className="main-nav">
+          <form className="header-search">
+            <label className="header-search-label"> Find Rooms
+              <input className="search-input"
+                placeholder="Where are you going?"/>
+              <button className='header-search-button'>
+                <i className="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </label>
+          </form>
+          <button className="logout-button" onClick={this.handleLogOutClick}>
+            Log Out</button>
+        </nav>
+
+
     );} else {
       return (
         <nav className="main-nav">

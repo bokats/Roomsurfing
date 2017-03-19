@@ -49,3 +49,31 @@
   margin-left: 400px;
   padding-right: 300px;
 }
+
+.header-search {
+  display: flex;
+  border: 1px solid #aeb5ba;
+  margin-right: 400px;
+  align-items: center;
+  border-radius: 50px;
+  // align-self: center;
+}
+
+.header-search-label {
+  padding-left: 25px;
+  font-size: 13px;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333333;
+  font-weight: bold;
+  padding-right: 20px;
+}
+.header-search-button {
+  margin-left: 50px;
+  cursor: pointer;
+  color: #929dad;
+  font-size: 15px;
+}
+
+.search-input {
+  margin-left: 20px;
+}

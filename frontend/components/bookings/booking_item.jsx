@@ -15,13 +15,19 @@ class BookingItem extends React.Component {
     };
   }
 
+  handleDeleteClick() {
+    return e => {
+      e.preventDefault();
+      this.props.deleteBooking(this.props.booking.id)
+      .then(hashHistory.push('/'));
+    };
+  }
+
   render() {
     let traveller = "traveler";
     if (this.props.booking.num_travellers > 1) {
       traveller = "travellers";
     }
-
-
 
     return (
       <section className="booking">
@@ -45,7 +51,7 @@ class BookingItem extends React.Component {
               onClick={this.handleEditClick(this.props.booking.id)}>
               Edit</button>
             <button className="delete-booking-button"
-              onClick={() => this.props.deleteBooking(this.props.booking.id)}
+              onClick={this.handleDeleteClick()}
               >Cancel</button>
           </section>
         </section>

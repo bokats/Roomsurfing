@@ -5,7 +5,7 @@
   height: 100%;
   flex-direction: row;
   align-items: flex-start;
-  
+  background-color: black;
 }
 
 .booking-form-container {
@@ -13,6 +13,7 @@
   flex-direction: column;
   border: 1px solid black;
   width: 502px;
+  margin-top: 50px;
 }
 
 .booking-form {
@@ -33,6 +34,7 @@
   border-bottom: 1px solid #bfcad2;
   padding-left: 20px;
   padding-bottom: 20px;
+  background-color: white;
 }
 
 .booking-form-message {
@@ -108,4 +110,18 @@
   padding: 8px 12px;
   text-align: center;
   margin-right: 9px;
+}
+
+.booking-form-cancel-button:hover, .booking-form-submit-button:hover {
+  cursor: pointer;
+}
+
+.booking-form-cancel-button:hover {
+  background-color: #929dad;
+  border: 1px solid #929dad;
+}
+
+.booking-form-submit-button:hover {
+  background-color: #2371a3;
+  border: 1px solid #2371a3;
 }

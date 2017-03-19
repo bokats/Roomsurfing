@@ -1,6 +1,6 @@
 import React from 'react';
 import BookingItem from './booking_item';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 
 class Bookings extends React.Component {
   constructor(props) {
@@ -34,8 +34,11 @@ class Bookings extends React.Component {
         <p className="booking-header-text">MY BOOKINGS</p>
         </section>
         {bookingsContent}
-        <section>
-          <p className="search-link">Search for a room</p>
+        <section className="booking-index-search">
+          <p className="search-link"
+            onClick={() => hashHistory.push("/search")}>
+            Search for a Room <i className="fa fa-play"></i>
+          </p>
         </section>
 
       </section>

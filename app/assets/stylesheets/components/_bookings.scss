@@ -95,3 +95,18 @@
   justify-content: center;
   background-color: #fbfcfc;
 }
+
+.booking-index-search {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  justify-content: center;
+  color: #287fb8;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.search-link:hover {
+  color: #ed6504;
+  cursor: pointer;
+}
