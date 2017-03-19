@@ -1,10 +1,19 @@
+
+.booking-form-container-parent {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  
+}
+
 .booking-form-container {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
   width: 502px;
 }
-
 
 .booking-form {
   display: flex;
@@ -23,6 +32,7 @@
 .booking-form-content {
   border-bottom: 1px solid #bfcad2;
   padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 .booking-form-message {
@@ -50,6 +60,7 @@
 .booking-form-travellers {
   font-weight: normal;
   width: 99px;
+  height: 30px;
 }
 
 .arrival-date-label, .departure-date-label, .travellers-label {
@@ -61,4 +72,40 @@
   display: flex;
   flex-direction: column;
   margin-top: 21px;
+}
+
+.booking-form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  height: 63px;
+  background-color: #d5dde2;
+  color: white;
+  align-items: center;
+  padding-right: 21px;
+}
+
+.booking-form-submit-button {
+  border: 1px solid $light-blue;
+  width: 64px;
+  height: 22px;
+  background-color: $light-blue;
+  border: 1px solid #287fb8;
+  border-radius: 3px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.booking-form-cancel-button {
+  border: 1px solid #afb7c3;
+  width: 64px;
+  height: 22px;
+  background-color: #afb7c3;
+  border-radius: 3px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 12px;
+  text-align: center;
+  margin-right: 9px;
 }
