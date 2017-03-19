@@ -21,8 +21,8 @@ export const removeRoom = room => ({
   room
 });
 
-export const fetchRooms = filters => dispatch => (
-  RoomApiUtil.fetchRooms(filters).then(res => dispatch(receiveRooms(res)),
+export const fetchRooms = () => dispatch => (
+  RoomApiUtil.fetchRooms().then(res => dispatch(receiveRooms(res)),
   err => dispatch(receiveRoomErrors(err.responseJSON)))
 );
 

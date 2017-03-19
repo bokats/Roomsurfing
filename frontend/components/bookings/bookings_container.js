@@ -7,7 +7,7 @@ const mapStateToProps = state => ({
   bookings: Object.keys(state.bookings).map(id => state.bookings[id])
 });
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch) => ({
   fetchBookings: () => dispatch(fetchBookings()),
   deleteBooking: bookingId => dispatch(deleteBooking(bookingId))
 });

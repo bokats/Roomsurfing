@@ -6,6 +6,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import WelcomePageContainer from "./welcome_page/welcome_page_container";
 import DashboardContainer from "./dashboard/dashboard_container";
 import BookingFormContainer from './bookings/booking_form_container';
+import SearchContainer from "./search/search_container";
 
 const Root = ({ store }) => {
 
@@ -44,6 +45,8 @@ const Root = ({ store }) => {
           onEnter={_redirectIfLoggedIn}/>
         <Route path="/signup" component={ SessionFormContainer }
           onEnter={_redirectIfLoggedIn}/>
+        <Route path="/search" component={ SearchContainer }
+          onEnter={_redirectIfNotLoggedIn}/>
       </Route>
     </Router>
   </Provider>);
