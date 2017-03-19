@@ -20,10 +20,8 @@ class Bookings extends React.Component {
           <BookingItem key={booking.id} booking={booking}
             deleteBooking={this.props.deleteBooking}/>)}
         </ul>
-        <p>Link to Search</p>
+        <p>Link to Search </p>
       </div>
-
-
   );
   }
 }

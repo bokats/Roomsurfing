@@ -1,5 +1,22 @@
 .dashboard-div {
   display: flex;
   border: 1px solid blue;
-  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dashboard-left-container {
+  display: flex;
+  // border: 3px solid green;
+  padding-left: 290px;
+  padding-top: 10px;
+}
+
+.dashboard-right-container {
+  display: flex;
+  border: 1px solid black;
+}
+
+.dashboard-div-container {
+  height: 100%;
+  background-color: #f1efea;
 }

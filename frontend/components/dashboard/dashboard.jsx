@@ -10,17 +10,20 @@ class Dashboard extends React.Component {
   render() {
     if (this.props.userDetails) {
       return (
-        <div className="dashboard-div">
-          <div className="dashboard-left-container">
-            <UserDetails userDetails={this.props.userDetails} />
-          </div>
-          <div className="dashboard-right-container">
-            <BookingsContainer />
-          </div>
-        </div>
+        <section className="dashboard-div-container">
+          <section className="dashboard-div">
+            <section className="dashboard-left-container">
+              <UserDetails userDetails={this.props.userDetails} />
+            </section>
+            <section className="dashboard-right-container">
+              <BookingsContainer />
+            </section>
+          </section>
+        </section>
+
       );
     } else {
-      return (<div></div>);
+      return (<section></section>);
     }
   }
 

@@ -1,7 +1,54 @@
-.user-details-container {
+.user-details-container, {
   display: flex;
-  border: 1px solid red;
+  // border: 1px solid red;
   flex-direction: column;
   width: 304px;
-  margin-top: 100px;
+  justify-content: space-between;
+  color: #27374c;
+  // align-items: center;
+  background-color: white;
+}
+
+#user-name-city-container {
+  width: 100%;
+  border-bottom: 1px solid #bfcad2;
+  padding-top: 28px;
+}
+
+.accepting-guests-dropdown-container {
+  display: flex;
+  color: #27374c;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  height: 60px;
+  border-bottom: 2px solid #bfcad2;
+}
+
+
+.accepting-guests-dropdown {
+  display: flex;
+  padding: 10px 10px 10px 50px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.user-name {
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.user-home-city {
+  margin-top: 3px;
+  font-size: 21px;
+  margin-bottom: 21px;
+  text-align: center;
+}
+
+.dropdown1, .dropdown2, .dropdown3 {
+  text-align: center;
+  justify-content: center;
 }
