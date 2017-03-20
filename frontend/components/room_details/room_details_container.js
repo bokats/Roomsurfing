@@ -3,7 +3,7 @@ import RoomDetails from './room_details';
 import { fetchRoomDetails } from '../../actions/room_details_actions';
 
 const mapStateToProps = state => ({
-  room_details: state.room_details
+  roomDetails: state.room_details
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -1,0 +1,72 @@
+.room-details-main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  color: #27374c;
+  // border: 1px solid black;
+}
+
+.room-details {
+  display: flex;
+  border: 1px solid red;
+  flex-direction: column;
+}
+
+.room-details-title-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.room-details-image {
+  width: 860px;
+}
+
+.room-details-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid green;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.room-details-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 80px;
+  border: 1px solid blue;
+  align-items: center;
+  font-weight: bold;
+}
+
+.book-room-button {
+  border: 1px solid $light-blue;
+  width: 241px;
+  height: 22px;
+  background-color: $light-blue;
+  border: 1px solid #287fb8;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 12px;
+  margin-right: 80px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.book-room-button:hover {
+  background-color: #2371a3;
+  border: 1px solid #2371a3;
+}
+
+.room-details-title {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.room-details-description {
+  border: 1px solid black;
+  padding-left: 20px;
+  margin-top: 30px;
+}

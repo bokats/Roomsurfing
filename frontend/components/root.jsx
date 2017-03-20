@@ -39,16 +39,18 @@ const Root = ({ store }) => {
           onEnter={_redirectIfLoggedIn}/>
         <IndexRoute component={ DashboardContainer }
           onEnter={_redirectIfNotLoggedIn}/>
-          <Route path='/editbooking/:bookingId'
-            component={BookingFormContainer}
-            onEnter={_redirectIfNotLoggedIn}/>
+        <Route path='/bookings/:bookingId/edit'
+          component={BookingFormContainer}
+          onEnter={_redirectIfNotLoggedIn}/>
         <Route path="/login" component={ SessionFormContainer }
           onEnter={_redirectIfLoggedIn}/>
         <Route path="/signup" component={ SessionFormContainer }
           onEnter={_redirectIfLoggedIn}/>
         <Route path="/search" component={ SearchContainer }
           onEnter={_redirectIfNotLoggedIn}/>
-        <Route path="/room/:roomId" component={RoomDetailsContainer}
+        <Route path="/rooms/:roomId" component={RoomDetailsContainer}
+          onEnter={_redirectIfNotLoggedIn}/>
+        <Route path="rooms/:roomId/book" component={BookingFormContainer}
           onEnter={_redirectIfNotLoggedIn}/>
       </Route>
     </Router>

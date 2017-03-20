@@ -7,7 +7,7 @@ import { removeBookingErrors } from '../../actions/errors_actions';
 const mapStateToProps = (state, ownProps) => {
   let booking = {arrival_date: "", depart_date: "", num_travellers: ""};
   let formType = "new";
-  if (ownProps.location.pathname.includes("/editbooking")) {
+  if (ownProps.location.pathname.includes("edit")) {
     booking = state.bookings[ownProps.params.bookingId];
     formType = 'edit';
   }

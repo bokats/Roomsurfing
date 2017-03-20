@@ -88,32 +88,8 @@
   padding-top: 38px;
 }
 
-.book-room-buttons {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-
-.book-room-button {
-  border: 1px solid $light-blue;
-  width: 241px;
-  background-color: $light-blue;
-  border: 1px solid #287fb8;
-  border-radius: 3px;
-  color: white;
-  font-weight: bold;
-  line-height: 1.5;
-  padding: 8px 12px;
-  text-align: center;
-}
-
 .room-item-container:hover {
   background-color: #eceff2;
-}
-
-.book-room-button:hover {
-  background-color: #2371a3;
-  border: 1px solid #2371a3;
 }
 
 .room-item-address, .room-item-city, .room-dates-travellers-ul {

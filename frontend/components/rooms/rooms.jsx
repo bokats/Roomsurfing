@@ -7,10 +7,6 @@ class Rooms extends React.Component {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchRooms();
-  }
-
   render() {
     let roomsContent = "";
     if (this.props.rooms.length > 0) {

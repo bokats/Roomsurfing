@@ -1,5 +1,7 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
+import RoomDetailsInfo from './room_details_info';
+import Map from '../map/map';
 
 class RoomDetails extends React.Component {
   constructor(props) {
@@ -14,19 +16,14 @@ class RoomDetails extends React.Component {
 
   render() {
     return (
-      <div className="room-details-container">
-        <div className="room-details-title">        
-          {this.props.room_details.title}
+      <div className="room-details-main">
+        <div className="room-details-container">
+          <RoomDetailsInfo roomDetails={this.props.roomDetails}
+            fetchRoomDetails={this.props.fetchRoomDetails}/>
         </div>
-        Hosted by: {this.props.room_details.host_first_name} {this.props
-          .room_details.host_last_name}
-        <img src={this.props.room_details.image_url}></img>
-        {this.props.room_details.address}
-        {this.props.room_details.city}
-        Available Dates: {this.props.room_details.avail_start} to {this.
-          props.room_details.avail_end}
-        {this.props.room_details.des}
-
+        <div className="map-container">
+          Map
+        </div>
       </div>
     );
   }
@@ -34,3 +31,4 @@ class RoomDetails extends React.Component {
 }
 
 export default RoomDetails;
+// <Map />

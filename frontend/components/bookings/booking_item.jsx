@@ -10,7 +10,7 @@ class BookingItem extends React.Component {
   handleEditClick(id) {
     return e => {
       e.preventDefault();
-      const url = `/editbooking/${id}`;
+      const url = `/bookings/${id}/edit`;
       hashHistory.push(url);
     };
   }
@@ -48,7 +48,7 @@ class BookingItem extends React.Component {
           </section>
           <section className="booking-buttons">
             <button className="edit-booking-button"
-              onClick={this.handleEditClick(this.props.booking.i)}>
+              onClick={this.handleEditClick(this.props.booking.id)}>
               Edit</button>
             <button className="delete-booking-button"
               onClick={this.handleDeleteClick()}

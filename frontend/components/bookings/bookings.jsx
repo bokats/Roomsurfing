@@ -12,6 +12,7 @@ class Bookings extends React.Component {
   }
 
   render() {
+    console.log("xyz");
     let bookingsContent = "";
     if (this.props.bookings.length > 0) {
       bookingsContent = (

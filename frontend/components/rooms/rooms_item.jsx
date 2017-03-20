@@ -9,7 +9,7 @@ class RoomItem extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    hashHistory.push(`/room/${this.props.room.id}`);
+    hashHistory.push(`/rooms/${this.props.room.id}`);
   }
 
   render() {

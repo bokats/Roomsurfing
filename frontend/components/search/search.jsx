@@ -1,5 +1,5 @@
 import React from 'react';
-import Map from '../map/map';
+import MapContainer from '../map/map_container';
 import RoomsContainer from '../rooms/rooms_container';
 
 const mapCenter = { lat: 37.7758, lng: -122.435 };
@@ -9,6 +9,10 @@ class Search extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchRooms();
+  }
+
   render() {
     return (
       <div className="search-page-container">
@@ -16,7 +20,7 @@ class Search extends React.Component {
           <RoomsContainer />
         </div>
         <div className="search-page-right">
-          <Map center={mapCenter} rooms={this.props.rooms}/>
+          <MapContainer center={mapCenter}/>
         </div>
       </div>
     );
