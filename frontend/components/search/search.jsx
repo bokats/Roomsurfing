@@ -17,8 +17,12 @@ class Search extends React.Component {
   render() {
     return (
       <div className="search-page-container">
-        <RoomsContainer />
-        <Map />
+        <div className="search-page-left">
+          <RoomsContainer />
+        </div>
+        <div className="search-page-right">
+          <Map />
+        </div>
       </div>
     );
   }

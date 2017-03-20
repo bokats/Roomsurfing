@@ -1,15 +1,20 @@
 .search-page-container {
   display: flex;
   flex-direction: row;
+  height: 100%;
+  background-color: #f1efea;
   justify-content: space-between;
+  height: 100%;
 }
 
 .rooms-index {
   display: flex;
-  border: 1px solid red;
-  width: 600px;
+  width: 850px;
   color: #27374c;
   flex-direction: column;
+  margin-left: 100px;
+  flex-direction: column;
+  position: relative;
 }
 
 .rooms-header {
@@ -22,26 +27,85 @@
   font-weight: bold;
   letter-spacing: 1px;
   font-size: 22px;
+  background-color: white;
 }
 
 .room-item-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  margin-top: 30px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.room-item-containt {
+  background-color: #f2f2f2;
 }
 
 .room-item-content {
   display: flex;
   flex-direction: row;
+  padding-top: 38px;
+
 }
 
 .room-item-info {
   display: flex;
   flex-direction: column;
+  margin-left: 20px;
+  width: 300px;
+  justify-content: center;
 }
 
 .room-item-image {
   border: 1px solid green;
   width: 200px;
   height: 200px;
+  margin-left: 20px;
+}
+
+.room-host-name {
+  margin-bottom: 38px;
+}
+
+.room-item-info-ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.room-item-description {
+  padding-left: 20px;
+  padding-top: 38px;
+}
+
+.book-room-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.book-room-button {
+  border: 1px solid $light-blue;
+  width: 241px;
+  background-color: $light-blue;
+  border: 1px solid #287fb8;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.room-item-container:hover {
+  background-color: #eceff2;
+}
+
+.book-room-button:hover {
+  background-color: #2371a3;
+  border: 1px solid #2371a3;
+}
+
+.room-item-address, .room-item-city, .room-dates-travellers-ul {
+  margin-bottom: 15px;
 }

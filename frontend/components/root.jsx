@@ -47,6 +47,8 @@ const Root = ({ store }) => {
           onEnter={_redirectIfLoggedIn}/>
         <Route path="/search" component={ SearchContainer }
           onEnter={_redirectIfNotLoggedIn}/>
+        <Route path="/newbooking" component={BookingFormContainer}
+          onEnter={_redirectIfNotLoggedIn}/>
       </Route>
     </Router>
   </Provider>);

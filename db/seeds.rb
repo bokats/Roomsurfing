@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.delete_all
+Room.delete_all
+Booking.delete_all
 
 User.create!(username: "bo", password: "password",
   first_name: "John", last_name: "Smith", home_city: "San Francisco")

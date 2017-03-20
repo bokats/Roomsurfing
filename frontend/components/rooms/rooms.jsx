@@ -29,7 +29,7 @@ class Rooms extends React.Component {
     return (
       <section className="rooms-index">
         <section className="rooms-header">
-          <p className="booking-header-text">Rooms</p>
+          <p className="booking-header-text">Available Rooms</p>
         </section>
         {roomsContent}
       </section>

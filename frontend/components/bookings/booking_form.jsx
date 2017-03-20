@@ -10,13 +10,25 @@ class BookingForm extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.params) {
+    if (this.props.formType === "edit") {
       this.props.fetchBooking(this.props.params.bookingId);
     }
   }
 
   componentWillReceiveProps(newProps) {
     this.setState(newProps.booking);
+  }
+
+  renderErrors() {
+    return(
+      <ul className="booking-form-errors">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   update(field) {
@@ -27,6 +39,7 @@ class BookingForm extends React.Component {
 
   handleCancelClick(e) {
     e.preventDefault();
+    this.props.removeBookingErrors();
     hashHistory.push('/');
   }
 
@@ -38,16 +51,19 @@ class BookingForm extends React.Component {
       depart_date: this.state.depart_date,
       num_travellers: this.state.num_travellers
     };
-    this.props.updateBooking(newBooking).then(hashHistory.push('/'));
+    this.props.action(newBooking).then(() => hashHistory.push('/'));
   }
 
   render() {
+    let headerText = this.props.formType === "new" ? "Book this room" :
+      "Edit my booking";
     return (
       <section className="booking-form-container-parent">
         <section className="booking-form-container">
           <section className="booking-form-message-container">
-            <p className="booking-form-message">EDIT MY BOOKING</p>
+            <p className="booking-form-message">{headerText}</p>
           </section>
+          {this.renderErrors()}
           <form className="booking-form" onSubmit={this.handleSubmit}>
             <section className="booking-form-content">
               <section className="booking-form-date-section">

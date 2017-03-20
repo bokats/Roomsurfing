@@ -110,3 +110,11 @@
   color: #ed6504;
   cursor: pointer;
 }
+
+.booking-form-errors {
+  display: flex;
+  background-color: rgba(198, 61, 67, 0.25);
+  color: white;
+  list-style-type: none;
+  justify-content: center;
+}
