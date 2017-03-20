@@ -1,6 +1,6 @@
 .header-cont {
   height: 100%;
-  // position: fixed;
+  position: relative;
   width: 100%;
 }
 
@@ -12,15 +12,19 @@
 }
 
 html, body, #root {
-  margin: 0;
+  // margin: 0;
   height: 100%
 }
 
 .page, .welcome-page {
-  margin: 0;
+  // margin: 0;
   height: 100%;
 }
 
 .welcome-page, .login-form-container {
   background-image: image-url("joshua-earle-2521.jpg");
+}
+
+.welcome-page {
+  display: flex;
 }

@@ -4,7 +4,7 @@ import { hashHistory } from 'react-router';
 class RoomItem extends React.Component {
   constructor(props) {
     super(props);
-    this.handleClick = this.handleClick.bind(this); 
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(e) {
@@ -19,7 +19,7 @@ class RoomItem extends React.Component {
       onClick={this.handleClick}>
       <div className='room-item-content'>
         <div className='room-item-image'>
-          Image
+          <img src={this.props.room.image_url}  width="100%"></img>
         </div>
         <div className='room-item-info'>
           <p className="room-host-name">
