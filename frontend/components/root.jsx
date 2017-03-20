@@ -7,6 +7,7 @@ import WelcomePageContainer from "./welcome_page/welcome_page_container";
 import DashboardContainer from "./dashboard/dashboard_container";
 import BookingFormContainer from './bookings/booking_form_container';
 import SearchContainer from "./search/search_container";
+import RoomDetailsContainer from './room_details/room_details_container';
 
 const Root = ({ store }) => {
 
@@ -47,7 +48,7 @@ const Root = ({ store }) => {
           onEnter={_redirectIfLoggedIn}/>
         <Route path="/search" component={ SearchContainer }
           onEnter={_redirectIfNotLoggedIn}/>
-        <Route path="/newbooking" component={BookingFormContainer}
+        <Route path="/room/:roomId" component={RoomDetailsContainer}
           onEnter={_redirectIfNotLoggedIn}/>
       </Route>
     </Router>

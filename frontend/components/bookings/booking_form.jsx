@@ -10,7 +10,7 @@ class BookingForm extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.formType === "edit") {
+    if (location.hash.includes("edit")) {
       this.props.fetchBooking(this.props.params.bookingId);
     }
   }

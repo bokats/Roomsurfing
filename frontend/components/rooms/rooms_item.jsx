@@ -4,18 +4,19 @@ import { hashHistory } from 'react-router';
 class RoomItem extends React.Component {
   constructor(props) {
     super(props);
-    this.handleBookButton = this.handleBookButton.bind(this);
+    this.handleClick = this.handleClick.bind(this); 
   }
 
-  handleBookButton() {
-    hashHistory.push('/newbooking');
+  handleClick(e) {
+    e.preventDefault();
+    hashHistory.push(`/room/${this.props.room.id}`);
   }
 
   render() {
 
     return (
-    <div className='room-item-container'>
-
+    <div className='room-item-container'
+      onClick={this.handleClick}>
       <div className='room-item-content'>
         <div className='room-item-image'>
           Image
@@ -37,12 +38,6 @@ class RoomItem extends React.Component {
               </div>
             </li>
           </ul>
-
-        </div>
-        <div className="book-room-buttons">
-          <button className="book-room-button" onClick={this.handleBookButton}>
-            Book this room
-          </button>
         </div>
       </div>
       <div className="room-item-description">
