@@ -8,6 +8,7 @@ class NavBar extends React.Component {
 		this.handleLogInClick = this.handleLogInClick.bind(this);
 		this.handleLogOutClick = this.handleLogOutClick.bind(this);
     this.handleGuestClick = this.handleGuestClick.bind(this);
+    this.handleDashboardButton = this.handleDashboardButton.bind(this);
   }
 
   handleSignUpClick(e) {
@@ -30,7 +31,12 @@ class NavBar extends React.Component {
   handleGuestClick(e) {
     e.preventDefault();
     this.props.loginGuest({user: {username: 'bo', password: 'password'}})
-    .then(() => hashHistory.push("/"));
+    .then(() => hashHistory.push("/login"));
+  }
+
+  handleDashboardButton(e) {
+    e.preventDefault();
+    hashHistory.push('/');
   }
 
   render() {
@@ -47,6 +53,8 @@ class NavBar extends React.Component {
               </button>
             </label>
           </form>
+          <button className="dashboard-button"
+            onClick={this.handleDashboardButton}>Dashboard</button>
           <button className="logout-button" onClick={this.handleLogOutClick}>
             Log Out</button>
         </nav>
