@@ -115,10 +115,8 @@ class BookingForm extends React.Component {
               </section>
             </section>
             <section className="booking-form-buttons">
-              <button className="booking-form-cancel-button"
-                onClick={this.handleCancelClick}>
-                Cancel
-              </button>
+              <input type="button" className="booking-form-cancel-button"
+                onClick={this.handleCancelClick} value="Cancel"/>
               <input className='booking-form-submit-button'
                 type="submit" value="Save"/>
             </section>

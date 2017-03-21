@@ -28,7 +28,6 @@ Room.create(
   lng: -122.407621)
 
 Room.create(
-
   title: "Living room in 3br apartment",
   description: "The room will be available when our family is on vacation",
   address: "770 Stockton St",

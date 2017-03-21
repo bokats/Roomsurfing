@@ -4,12 +4,13 @@ import { fetchRooms } from '../../actions/rooms_actions';
 
 const mapStateToProps = state => {
   return {
-    rooms: state.rooms
+    rooms: state.rooms,
+    filters: state.filters
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchRooms: () => dispatch(fetchRooms())
+  fetchRooms: (filters) => dispatch(fetchRooms(filters))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

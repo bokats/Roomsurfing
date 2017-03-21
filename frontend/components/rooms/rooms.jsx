@@ -7,11 +7,34 @@ class Rooms extends React.Component {
     super(props);
   }
 
+  handleFilterChange(filter) {
+    return e => {
+      e.preventDefault();
+      this.props.updateFilter(filter, e.target.value)
+      debugger;
+      this.props.fetchRooms(this.props.filters)
+    };
+  }
+
   render() {
     let roomsContent = "";
     if (this.props.rooms.length > 0) {
       roomsContent = (
         <ul className="rooms-list">
+          <div className="filter-dates-container">
+            <label className='arrival-date-label'> Start Date
+              <input className='booking-form-arrival-date'
+                type="date"
+                onChange={this.handleFilterChange('startDate')}
+                value={this.props.filters.startDate}/>
+            </label>
+            <label className='departure-date-label'> End Date
+              <input className='booking-form-departure-date'
+                type="date"
+                onChange={this.handleFilterChange('endDate')}
+                value={this.props.filters.endDate}/>
+            </label>
+          </div>
           {this.props.rooms.map(room =>
           <RoomItem key={room.id} room={room}/>)}
         </ul>);

@@ -1,8 +1,9 @@
 
-export const fetchRooms = () => {
+export const fetchRooms = (data) => {
   return $.ajax ({
     method: "GET",
-    url: 'api/rooms'
+    url: 'api/rooms',
+    data: {data}
   });
 };
 
