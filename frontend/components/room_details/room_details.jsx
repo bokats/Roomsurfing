@@ -12,17 +12,19 @@ class RoomDetails extends React.Component {
     if (this.props.params) {
       this.props.fetchRoomDetails(this.props.params.roomId);
     }
+    this.props.fetchRooms();
   }
 
   render() {
+    const mapCenter = { lat: 37.7758, lng: -122.435 };
     return (
       <div className="room-details-main">
         <div className="room-details-container">
           <RoomDetailsInfo roomDetails={this.props.roomDetails}
             fetchRoomDetails={this.props.fetchRoomDetails}/>
         </div>
-        <div className="map-container">
-
+        <div className="search-page-right">
+          <MapContainer center={mapCenter}/>
         </div>
       </div>
     );
@@ -31,4 +33,3 @@ class RoomDetails extends React.Component {
 }
 
 export default RoomDetails;
-// <Map />

@@ -18,7 +18,11 @@ class BookingItem extends React.Component {
   handleDeleteClick() {
     return e => {
       e.preventDefault();
-      this.props.deleteBooking(this.props.booking.id);
+      const room = {
+        id: this.props.booking.room_id,
+        booked: false};
+      this.props.deleteBooking(this.props.booking.id)
+       .then(() => this.props.updateRoom(room));
     };
   }
 

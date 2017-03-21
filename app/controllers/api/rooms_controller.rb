@@ -13,7 +13,6 @@ class Api::RoomsController < ApplicationController
   end
 
   def create
-    p room_params
     @room = Room.new(room_params)
     @room[host_id] = @current_user.id
     if @room.save
@@ -25,8 +24,7 @@ class Api::RoomsController < ApplicationController
 
   def update
     @room = Room.find(params[:id])
-    if @room.update_attributes(room_params) &&
-      @current_user.id == @room.host_id
+    if @room.update_attributes(room_params)
       render :show
     else
       render(json: ["Invalid information"], status: 422)

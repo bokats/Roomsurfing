@@ -7,6 +7,7 @@ class BookingForm extends React.Component {
     this.state = this.props.booking;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCancelClick = this.handleCancelClick.bind(this);
+    this.num_travellers = 1;
   }
 
   componentDidMount() {
@@ -35,6 +36,7 @@ class BookingForm extends React.Component {
     return e => {
       this.setState({[field]: e.target.value});
     };
+
   }
 
   handleCancelClick(e) {
@@ -56,11 +58,12 @@ class BookingForm extends React.Component {
       num_travellers: this.state.num_travellers,
       room_id: this.props.params.roomId
       };
+      // Change num travellers (BUG)
+      debugger;
       const newRoom = {
         id: this.props.params.roomId,
         booked: true
         };
-      debugger;
       this.props.action(newBooking).then(() => this.props.updateRoom(newRoom))
       .then(() => hashHistory.push('/'));
     } else {

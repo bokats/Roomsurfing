@@ -18,7 +18,8 @@ class Bookings extends React.Component {
         <ul className="bookings-list">
           {this.props.bookings.map(booking =>
           <BookingItem key={booking.id} booking={booking}
-            deleteBooking={this.props.deleteBooking}/>)}
+            deleteBooking={this.props.deleteBooking}
+            updateRoom={this.props.updateRoom}/>)}
         </ul>);
     } else {
       bookingsContent = (

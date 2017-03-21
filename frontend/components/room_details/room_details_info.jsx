@@ -14,7 +14,7 @@ class RoomDetailsInfo extends React.Component {
 
   render() {
     return (
-      <div className="room-details" onClick={this.handleBook}>
+      <div className="room-details">
         <div className="room-details-title-container">
           <p className="room-details-title">{this.props.roomDetails.title}</p>
           <p className="room-details-host">
@@ -39,7 +39,7 @@ class RoomDetailsInfo extends React.Component {
                 props.roomDetails.avail_end}
             </p>
           </div>
-          <button className="book-room-button">
+          <button className="book-room-button" onClick={this.handleBook}>
             Book Room
           </button>
         </div>
