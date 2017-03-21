@@ -1,7 +1,7 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
 import RoomDetailsInfo from './room_details_info';
-import Map from '../map/map';
+import MapContainer from '../map/map_container';
 
 class RoomDetails extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class RoomDetails extends React.Component {
             fetchRoomDetails={this.props.fetchRoomDetails}/>
         </div>
         <div className="map-container">
-          Map
+
         </div>
       </div>
     );

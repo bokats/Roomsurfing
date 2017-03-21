@@ -8,6 +8,7 @@ const RoomsReducer = (state = {}, action) => {
     case RECEIVE_ROOMS:
       return action.rooms;
     case RECEIVE_ROOM:
+      debugger;
       const newRoom = {[action.room.id]: action.room};
       return merge({}, state, newRoom);
     case REMOVE_ROOM:

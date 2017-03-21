@@ -15,11 +15,10 @@ class Api::BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.traveller_id = @current_user.id
-    @booking.room_id = params[:id]
     if @booking.save
       render :show
     else
-      render(json: ["Invalid information"], status: 422)
+      render(json: ["Invalid dates. Please enter the dates again"], status: 422)
     end
   end
 
@@ -45,6 +44,6 @@ class Api::BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:arrival_date, :depart_date,
-      :num_travellers, :traveller_id, :room_id)
+      :num_travellers, :room_id)
   end
 end

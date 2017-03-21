@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-// import { fetchBookings } from './actions/bookings_actions';
-//
-// window.fetchBookings = fetchBookings;
+import { updateRoom } from './util/room_api_util';
+
+window.updateRoom = updateRoom;
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;

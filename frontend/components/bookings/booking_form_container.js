@@ -3,6 +3,7 @@ import BookingForm from './booking_form';
 import { fetchBooking, fetchBookings, updateBooking, createBooking }
   from '../../actions/bookings_actions';
 import { removeBookingErrors } from '../../actions/errors_actions';
+import { updateRoom } from '../../actions/rooms_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let booking = {arrival_date: "", depart_date: "", num_travellers: ""};
@@ -18,13 +19,15 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   let action = createBooking;
-  if (ownProps.params) {
+  if (location.hash.includes("edit")) {
     action = updateBooking;
   }
+
   return {
     fetchBooking: id => dispatch(fetchBooking(id)),
     action: booking => dispatch(action(booking)),
-    removeBookingErrors: () => dispatch(removeBookingErrors())
+    removeBookingErrors: () => dispatch(removeBookingErrors()),
+    updateRoom: room => dispatch(updateRoom(room))
   };
 };
 

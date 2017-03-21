@@ -27,7 +27,6 @@ class BookingItem extends React.Component {
     if (this.props.booking.num_travellers > 1) {
       traveller = "travellers";
     }
-    console.log("render");
 
     return (
       <section className="booking">

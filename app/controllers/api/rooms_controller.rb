@@ -3,7 +3,7 @@ class Api::RoomsController < ApplicationController
   before_action :require_logged_in
 
   def index
-    @rooms = Room.all
+    @rooms = Room.where("booked = false")
     render :index
   end
 
@@ -15,7 +15,7 @@ class Api::RoomsController < ApplicationController
   def create
     p room_params
     @room = Room.new(room_params)
-    # @room[host_id] = @current_user.id
+    @room[host_id] = @current_user.id
     if @room.save
       render :show
     else
@@ -42,6 +42,6 @@ class Api::RoomsController < ApplicationController
 
   def room_params
     params.require(:room).permit(:title, :description, :address,
-      :avail_start, :avail_end, :image_url, :city, :host_id)
+      :avail_start, :avail_end, :image_url, :city, :booked)
   end
 end

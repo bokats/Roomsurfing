@@ -9,7 +9,6 @@ class RoomDetailsInfo extends React.Component {
 
   handleBook(e) {
     e.preventDefault();
-    debugger;
     hashHistory.push(`/rooms/${this.props.roomDetails.id}/book`);
   }
 

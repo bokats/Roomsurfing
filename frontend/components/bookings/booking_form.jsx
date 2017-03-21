@@ -40,18 +40,37 @@ class BookingForm extends React.Component {
   handleCancelClick(e) {
     e.preventDefault();
     this.props.removeBookingErrors();
-    hashHistory.push('/');
+    if (this.props.formType === "new") {
+      hashHistory.push(`/rooms/${this.props.params.roomId}`);
+    } else {
+      hashHistory.push("/");
+    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const newBooking = {
-      id: this.state.id,
+    if (this.props.formType === "new") {
+      const newBooking = {
       arrival_date: this.state.arrival_date,
       depart_date: this.state.depart_date,
-      num_travellers: this.state.num_travellers
-    };
-    this.props.action(newBooking).then(() => hashHistory.push('/'));
+      num_travellers: this.state.num_travellers,
+      room_id: this.props.params.roomId
+      };
+      const newRoom = {
+        id: this.props.params.roomId,
+        booked: true
+        };
+      debugger;
+      this.props.action(newBooking).then(() => this.props.updateRoom(newRoom))
+      .then(() => hashHistory.push('/'));
+    } else {
+      const editBooking = {
+        id: this.state.id,
+        arrival_date: this.state.arrival_date,
+        depart_date: this.state.depart_date,
+        num_travellers: this.state.num_travellers};
+      this.props.action(editBooking).then(() => hashHistory.push('/'));
+    }
   }
 
   render() {
