@@ -7,7 +7,6 @@ class BookingForm extends React.Component {
     this.state = this.props.booking;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCancelClick = this.handleCancelClick.bind(this);
-    this.num_travellers = 1;
   }
 
   componentDidMount() {
@@ -52,14 +51,15 @@ class BookingForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     if (this.props.formType === "new") {
-      const newBooking = {
+      let newBooking = {
       arrival_date: this.state.arrival_date,
       depart_date: this.state.depart_date,
       num_travellers: this.state.num_travellers,
       room_id: this.props.params.roomId
       };
-      // Change num travellers (BUG)
-      debugger;
+      if (newBooking.num_travellers === "") {
+        newBooking.num_travellers = 1;
+      }
       const newRoom = {
         id: this.props.params.roomId,
         booked: true
