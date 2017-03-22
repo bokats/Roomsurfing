@@ -10,9 +10,7 @@ class Rooms extends React.Component {
   handleFilterChange(filter) {
     return e => {
       e.preventDefault();
-      this.props.updateFilter(filter, e.target.value)
-      debugger;
-      this.props.fetchRooms(this.props.filters)
+      this.props.updateFilter(filter, e.target.value);
     };
   }
 
@@ -21,20 +19,6 @@ class Rooms extends React.Component {
     if (this.props.rooms.length > 0) {
       roomsContent = (
         <ul className="rooms-list">
-          <div className="filter-dates-container">
-            <label className='arrival-date-label'> Start Date
-              <input className='booking-form-arrival-date'
-                type="date"
-                onChange={this.handleFilterChange('startDate')}
-                value={this.props.filters.startDate}/>
-            </label>
-            <label className='departure-date-label'> End Date
-              <input className='booking-form-departure-date'
-                type="date"
-                onChange={this.handleFilterChange('endDate')}
-                value={this.props.filters.endDate}/>
-            </label>
-          </div>
           {this.props.rooms.map(room =>
           <RoomItem key={room.id} room={room}/>)}
         </ul>);
@@ -50,6 +34,20 @@ class Rooms extends React.Component {
         <section className="rooms-header">
           <p className="booking-header-text">Available Rooms</p>
         </section>
+        <div className="filter-dates-container">
+          <label className='start-date-label'> Start Date
+            <input className='start-date'
+              type="date"
+              onChange={this.handleFilterChange('startDate')}
+              value={this.props.filters.startDate}/>
+          </label>
+          <label className='end-date-label'> End Date
+            <input className='end-date'
+              type="date"
+              onChange={this.handleFilterChange('endDate')}
+              value={this.props.filters.endDate}/>
+          </label>
+        </div>
         {roomsContent}
       </section>
     );

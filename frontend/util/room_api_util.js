@@ -3,7 +3,7 @@ export const fetchRooms = (data) => {
   return $.ajax ({
     method: "GET",
     url: 'api/rooms',
-    data: {data}
+    data: data
   });
 };
 

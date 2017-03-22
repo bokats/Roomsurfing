@@ -43,7 +43,6 @@
 .room-item-container {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
   cursor: pointer;
   background-color: white;
 }
@@ -68,9 +67,7 @@
 }
 
 .room-item-image {
-  // border: 1px solid green;
   width: 200px;
-    // height: 200px;
   margin-left: 20px;
 }
 
@@ -94,4 +91,23 @@
 
 .room-item-address, .room-item-city, .room-dates-travellers-ul {
   margin-bottom: 15px;
+}
+
+.filter-dates-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+}
+.start-date-label, .end-date-label {
+  font-weight: bold;
+  color: #27374c;
+}
+.start-date, .end-date {
+  padding: 2px;
+  border: 1px solid #aeb5ba;
+  border-radius: 4px;
+  font-weight: normal;
+  margin-left: 20px;
+  text-align: center;
 }
