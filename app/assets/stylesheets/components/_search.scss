@@ -3,6 +3,7 @@
   flex-direction: row;
   background-color: #f1efea;
   justify-content: space-between;
+  min-height: 100%;
 }
 
 .search-page-right {
@@ -13,6 +14,7 @@
   width: 95%;
   height: 80%;
   margin-left: 12px;
+  max-height: 800px;
 }
 
 .rooms-index {

@@ -15,7 +15,15 @@ class Map extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    this.MarkerManager.updateMarkers(newProps.rooms);
+    console.log("newprops", newProps.filters);
+    console.log("old props", this.props.filters);
+    console.log("rooms", this.props.rooms);
+
+    if (this.props.filters.city === "San Francisco" ||
+      this.props.rooms !== newProps.rooms) {
+      console.log("rooms being run", newProps.rooms);
+      this.MarkerManager.updateMarkers(newProps.rooms)  ;
+    }
   }
 
   render() {

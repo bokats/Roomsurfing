@@ -13,7 +13,8 @@ const mapStateToProps = (state, ownProps) => {
     };
   }
   return {
-    rooms: rooms
+    rooms: rooms,
+    filters: state.filters
   };
 };
 
