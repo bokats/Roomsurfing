@@ -14,7 +14,6 @@ class Map extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    debugger;
     this.MarkerManager.updateMarkers(newProps.rooms);
   }
 

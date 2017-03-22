@@ -61,10 +61,10 @@ User.create(username: "la5", password: "password", first_name: "Ben",
 User.create(username: "par1", password: "password", first_name: "Pierre",
   last_name: "Lacroix", home_city: "Paris, France")
 
-User.create(username: "par1", password: "password", first_name: "David",
+User.create(username: "par2", password: "password", first_name: "David",
   last_name: "Blanc", home_city: "Paris, France")
 
-User.create(username: "par1", password: "password", first_name: "Marie",
+User.create(username: "par3", password: "password", first_name: "Marie",
   last_name: "Deschamps", home_city: "Paris, France")
 
 Room.create(
@@ -353,3 +353,35 @@ Room.create(
   lat: 48.84392279999999,
   lng: 2.3164099000000533
 )
+
+Booking.create(
+  arrival_date: Date.new(2017, 6, 10),
+  depart_date: Date.new(2017, 6, 13),
+  num_travellers: 1,
+  traveller_id: 1,
+  room_id: 1
+)
+
+Booking.create(
+  arrival_date: Date.new(2017, 8, 11),
+  depart_date: Date.new(2017, 8, 12),
+  num_travellers: 1,
+  traveller_id: 1,
+  room_id: 8
+)
+
+Booking.create(
+  arrival_date: Date.new(2017, 8, 7),
+  depart_date: Date.new(2017, 8, 9),
+  num_travellers: 1,
+  traveller_id: 1,
+  room_id: 17
+)
+
+r1 = Room.find(1)
+r2 = Room.find(8)
+r3 = Room.find(17)
+#
+r3.update(avail_start: Date.new(2017, 8, 9))
+r2.update(avail_start: Date.new(2017, 8, 13))
+r1.update(avail_start: Date.new(2017, 6, 13))
