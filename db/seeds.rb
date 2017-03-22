@@ -67,6 +67,42 @@ User.create(username: "par2", password: "password", first_name: "David",
 User.create(username: "par3", password: "password", first_name: "Marie",
   last_name: "Deschamps", home_city: "Paris, France")
 
+User.create(username: "par4", password: "password", first_name: "Louis",
+  last_name: "Debuchy", home_city: "Paris, France")
+
+User.create(username: "rio1", password: "password", first_name: "Maria",
+  last_name: "Silva", home_city: "Rio de Janeiiro, Brazil")
+
+User.create(username: "rio2", password: "password", first_name: "Pedro",
+  last_name: "Lucas", home_city: "Rio de Janeiiro, Brazil")
+
+User.create(username: "rio3", password: "password", first_name: "Emilio",
+  last_name: "Souza", home_city: "Rio de Janeiiro, Brazil")
+
+User.create(username: "tok1", password: "password", first_name: "Ken",
+  last_name: "Nishimura", home_city: "Tokyo, Japan")
+
+User.create(username: "tok2", password: "password", first_name: "Sho",
+  last_name: "Fujimura", home_city: "Tokyo, Japan")
+
+User.create(username: "tok3", password: "password", first_name: "Lilly",
+  last_name: "Chang", home_city: "Tokyo, Japan")
+
+User.create(username: "joh1", password: "password", first_name: "Ibe",
+  last_name: "Botha", home_city: "Johannesburg, South Africa")
+
+User.create(username: "joh2", password: "password", first_name: "James",
+  last_name: "Thompson", home_city: "Johannesburg, South Africa")
+
+User.create(username: "joh3", password: "password", first_name: "Megan",
+  last_name: "Harrington", home_city: "Johannesburg, South Africa")
+
+User.create(username: "sf6", password: "password", first_name: "Brendan",
+  last_name: "Benjamin", home_city: "San Francisco, CA")
+
+User.create(username: "sf7", password: "password", first_name: "Emily",
+  last_name: "Christopher", home_city: "San Francisco, CA")
+
 Room.create(
   title: "Bedroom in a 3-bedroom downtown apartment",
   description: "A beautiful room available in downtown San Francisco.
@@ -363,7 +399,7 @@ Room.create(
   address: "7 Rue Rembrandt",
   avail_start: Date.new(2017, 7, 5),
   avail_end: Date.new(2017, 7, 15),
-  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217261/par4_a3vptv.jpg",
   city: "Paris",
   host_id: 20,
   booked: false,
@@ -380,7 +416,7 @@ Room.create(
   address: "R. Gen. Barbosa Lima, 99 - Copacabana",
   avail_start: Date.new(2017, 6, 10),
   avail_end: Date.new(2017, 6, 20),
-  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217261/rio1_szfe1t.jpg",
   city: "Rio de Janeiro",
   host_id: 21,
   booked: false,
@@ -397,7 +433,7 @@ Room.create(
   address: "R. Cardeal Dom Sebastião Leme, 30 - Santa Teresa",
   avail_start: Date.new(2017, 6, 30),
   avail_end: Date.new(2017, 7, 2),
-  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217261/rio2_ogt5ts.jpg",
   city: "Rio de Janeiro",
   host_id: 22,
   booked: false,
@@ -415,7 +451,7 @@ Room.create(
   address: "128 R. Soares da Costa",
   avail_start: Date.new(2017, 7, 10),
   avail_end: Date.new(2017, 7, 14),
-  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217357/rio3_tcg9d8.jpg",
   city: "Rio de Janeiro",
   host_id: 23,
   booked: false,
@@ -431,7 +467,7 @@ Room.create(
   address: "2 Chome-7-11 Hakusan",
   avail_start: Date.new(2017, 6, 15),
   avail_end: Date.new(2017, 6, 22),
-  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217283/tok1_rmf5ft.jpg",
   city: "Tokyo",
   host_id: 24,
   booked: false,
@@ -448,7 +484,7 @@ Room.create(
   address: "5 Chome-9-3 Minamiazabu",
   avail_start: Date.new(2017, 7, 1),
   avail_end: Date.new(2017, 7, 10),
-  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217283/tok2_kvlnym.jpg",
   city: "Tokyo",
   host_id: 25,
   booked: false,
@@ -465,7 +501,7 @@ Room.create(
   address: "1 Chome-8-16 Harumi",
   avail_start: Date.new(2017, 6, 15),
   avail_end: Date.new(2017, 6, 22),
-  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217283/tok3_hb1v53.jpg",
   city: "Tokyo",
   host_id: 26,
   booked: false,
@@ -482,7 +518,7 @@ Room.create(
   address: "238 Jeppe St",
   avail_start: Date.new(2017, 7, 5),
   avail_end: Date.new(2017, 7, 22),
-  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217246/joh1_jzbx77.jpg",
   city: "Jonannesburg",
   host_id: 27,
   booked: false,
@@ -499,7 +535,7 @@ Room.create(
   address: "13 De Gaulle Rd",
   avail_start: Date.new(2017, 8, 1),
   avail_end: Date.new(2017, 8, 10),
-  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217246/joh2_girgpn.jpg",
   city: "Jonannesburg",
   host_id: 28,
   booked: false,
@@ -516,13 +552,49 @@ Room.create(
   address: "63 Lamoen St",
   avail_start: Date.new(2017, 6, 5),
   avail_end: Date.new(2017, 6, 20),
-  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217246/joh3_p7gfri.jpg",
   city: "Jonannesburg",
-  host_id: 28,
+  host_id: 29,
   booked: false,
   lat: -26.20283,
   lng: 28.078089999999975
 )
+
+Room.create(
+  title: "Large bedroom in the Castro",
+  description: "Room available in a 4-bedroom apartment in the Castro. It is shared
+    with 3 roommates, all of whom are young professionals very passionate about travel and
+    looking to meet fellow travellers. The room has a private closet to store luggage
+    and free coffee and internet.",
+  address: "159 Collingwood St",
+  avail_start: Date.new(2017, 7, 7),
+  avail_end: Date.new(2017, 7, 20),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217273/sf6_o46igy.jpg",
+  city: "San Francisco",
+  host_id: 30,
+  booked: false,
+  lat: 37.75991339999999,
+  lng: -122.4359106
+)
+
+Room.create(
+  title: "Room in friendly apartment",
+  description: "Room in Russian Hill available for begginning of July. Our third
+    roommate is leaving and we would love to meet and let and someone stay in the room for a week
+    before the new person moves in. The room is clean, quiet and located close to downtown and the Marina.
+    The roommates are both working in theater and like to get breakfast and dinner together.
+    ",
+  address: "1188 Vallejo St",
+  avail_start: Date.new(2017, 6, 26),
+  avail_end: Date.new(2017, 7, 2),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217273/sf7_blq7vu.jpg",
+  city: "San Francisco",
+  host_id: 31,
+  booked: false,
+  lat: 37.7977061,
+  lng: -122.41679959999999
+)
+
 
 
 Booking.create(
