@@ -3,7 +3,6 @@ class MarkerManager {
     this.map = map;
     this.markers = [];
     this._createMarkerFromRoom = this._createMarkerFromRoom.bind(this);
-    // this._removeMarker = this._removeMarker.bind(this);
   }
 
   updateMarkers(rooms) {

@@ -9,6 +9,8 @@ class NavBar extends React.Component {
 		this.handleLogOutClick = this.handleLogOutClick.bind(this);
     this.handleGuestClick = this.handleGuestClick.bind(this);
     this.handleDashboardButton = this.handleDashboardButton.bind(this);
+    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
+    this.state = this.props.filters;
   }
 
   handleSignUpClick(e) {
@@ -39,6 +41,17 @@ class NavBar extends React.Component {
     hashHistory.push('/');
   }
 
+  handleFilterChange(filter) {
+    return e => {
+      this.setState({[filter]: e.target.value});
+    };
+  }
+
+  handleSearchSubmit(e) {
+    e.preventDefault();
+    this.props.updateFilter("city", this.state.city);
+  }
+
   render() {
     if (this.props.currentUser) {
       return (
@@ -47,8 +60,11 @@ class NavBar extends React.Component {
           <form className="header-search">
             <label className="header-search-label"> Find Rooms
               <input className="search-input"
-                placeholder="Where are you going?"/>
-              <button className='header-search-button'>
+                placeholder="Where are you going?"
+                onChange={this.handleFilterChange("city")}
+                value={this.state.city}/>
+              <button className='header-search-button'
+                onClick={this.handleSearchSubmit}>
                 <i className="fa fa-search" aria-hidden="true"></i>
               </button>
             </label>
