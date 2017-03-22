@@ -354,6 +354,177 @@ Room.create(
   lng: 2.3164099000000533
 )
 
+Room.create(
+  title: "Room close to Champs-Elysees",
+  description: "I have a small room with a bed available for any tourists visiting
+    the city. It is on the 1st floor, it's clean and it is prime location close to
+    Champs-Elysees. The building is old, just like most in Paris, but perfect for a short-term
+    stay. I also have some free passes for the Eiffel Tower.",
+  address: "7 Rue Rembrandt",
+  avail_start: Date.new(2017, 7, 5),
+  avail_end: Date.new(2017, 7, 15),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  city: "Paris",
+  host_id: 20,
+  booked: false,
+  lat: 48.8772337,
+  lng: 2.3080457999999453
+)
+
+Room.create(
+  title: "Room close to the famous Copacabana",
+  description: "Room available right next to Copacabana. This is prime location in Rio
+    and I letting visitors stay in one of my rooms to meet new people. I want people to
+    have a great stay in Brazil. The room is clean, has a bed and internet and it is in a safe
+    area.",
+  address: "R. Gen. Barbosa Lima, 99 - Copacabana",
+  avail_start: Date.new(2017, 6, 10),
+  avail_end: Date.new(2017, 6, 20),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  city: "Rio de Janeiro",
+  host_id: 21,
+  booked: false,
+  lat: -22.9666385,
+  lng: -43.180231100000015
+)
+
+Room.create(
+  title: "Living room for a weekend",
+  description: "Living room is available for a weekend in August to host any newcomer to
+    Brazil. We are a family of 2 and love hosting and meeting people from aroung the world.
+    The room will only be available for non-Brazilians. The room has a bed, but may be load,
+    as it is between the bedroom and the apartment entrance. The apartment is also close to the airport",
+  address: "R. Cardeal Dom Sebastião Leme, 30 - Santa Teresa",
+  avail_start: Date.new(2017, 6, 30),
+  avail_end: Date.new(2017, 7, 2),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  city: "Rio de Janeiro",
+  host_id: 22,
+  booked: false,
+  lat: -22.9164099,
+  lng: -43.18921979999999
+)
+
+Room.create(
+  title: "Room for international students",
+  description: "Room is available in the International Students Foundation building
+    for 4 days for any students coming on a university visit. The room will only be
+    available for non-Brazilian students. You will have you own bathroom and a king bed.
+    Your neighbors will all be other international students and it is a perfect
+    opportunity to meet new friends",
+  address: "128 R. Soares da Costa",
+  avail_start: Date.new(2017, 7, 10),
+  avail_end: Date.new(2017, 7, 14),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  city: "Rio de Janeiro",
+  host_id: 23,
+  booked: false,
+  lat: -22.9252191,
+  lng: -43.23119270000001
+)
+
+Room.create(
+  title: "Room in 2-bedroom apartment",
+  description: "I have an available room in my 2-bedroom apartment. It has a bed, it's clean,
+    and it is close proximity to Tokyo city center. There are many good restaurants
+    close by. Come and experience the Japanese culture without paying for hotel.",
+  address: "2 Chome-7-11 Hakusan",
+  avail_start: Date.new(2017, 6, 15),
+  avail_end: Date.new(2017, 6, 22),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  city: "Tokyo",
+  host_id: 24,
+  booked: false,
+  lat: 35.7158334,
+  lng: 139.7490586
+)
+
+Room.create(
+  title: "Guest room in a family home",
+  description: "The room is located in Minato-ku district. We have a 3-bedroom apartment
+    and have one room available as our kid will be away. Perfect for any tourists as it is close to
+    city center, many touristic attractions. There is internet and we have free passes for the Tokyo
+    subway in case you want to use it.",
+  address: "5 Chome-9-3 Minamiazabu",
+  avail_start: Date.new(2017, 7, 1),
+  avail_end: Date.new(2017, 7, 10),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  city: "Tokyo",
+  host_id: 25,
+  booked: false,
+  lat: 35.6537733,
+  lng: 139.72433509999996
+)
+
+Room.create(
+  title: "Large bedroom in Tokyo",
+  description: "Beautiful room in an apartment with Chinese students in Tokyo. We
+    are looking to meet new travellers and have one of our rooms available for
+    anyone visiting Tokyo. We will only accept people under the age of 30. The room is
+    clean, has internet free coffee in the morning.",
+  address: "1 Chome-8-16 Harumi",
+  avail_start: Date.new(2017, 6, 15),
+  avail_end: Date.new(2017, 6, 22),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  city: "Tokyo",
+  host_id: 26,
+  booked: false,
+  lat: 35.6728535,
+  lng: 139.81740969999998
+)
+
+Room.create(
+  title: "Free bedroom in Johannesburg",
+  description: "I have an available bedroom in 4-bedroom apartment hosting visitors
+    to Johannesburg. It is clean, in good neighborhood and the roommates are all from
+    different countries doing non-profit work in Africa. We are looking to host and meet new people
+    from around the world",
+  address: "238 Jeppe St",
+  avail_start: Date.new(2017, 7, 5),
+  avail_end: Date.new(2017, 7, 22),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  city: "Jonannesburg",
+  host_id: 27,
+  booked: false,
+  lat: -26.2009599,
+  lng: 28.050209999999993
+)
+
+Room.create(
+  title: "Room close to Homestead Park",
+  description: "We have an empty guest room available for a week to anyone who is
+    visiting Johannesburg. The rooms is on the 2nd floor and you will have lots of private space. It is clean, quiet and the roommates are two dotors in their
+    mid 40s. Please take a cab to get to the apartment if you are coming from the airport.
+    ",
+  address: "13 De Gaulle Rd",
+  avail_start: Date.new(2017, 8, 1),
+  avail_end: Date.new(2017, 8, 10),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  city: "Jonannesburg",
+  host_id: 28,
+  booked: false,
+  lat: -26.20414,
+  lng: 28.001840000000016
+)
+
+Room.create(
+  title: "Guest house in Johannesburg",
+  description: "Room available in a private guest house in Jonannesburg. It has private
+    bathroom and backyard. It is in a safe neighborhood and good place for any short-term
+    visitors. We have hosted a number of people and have great stories to share.
+    ",
+  address: "63 Lamoen St",
+  avail_start: Date.new(2017, 6, 5),
+  avail_end: Date.new(2017, 6, 20),
+  image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
+  city: "Jonannesburg",
+  host_id: 28,
+  booked: false,
+  lat: -26.20283,
+  lng: 28.078089999999975
+)
+
+
 Booking.create(
   arrival_date: Date.new(2017, 6, 10),
   depart_date: Date.new(2017, 6, 13),
@@ -377,6 +548,7 @@ Booking.create(
   traveller_id: 1,
   room_id: 17
 )
+
 
 r1 = Room.find(1)
 r2 = Room.find(8)

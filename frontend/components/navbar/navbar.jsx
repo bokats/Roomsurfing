@@ -50,6 +50,8 @@ class NavBar extends React.Component {
   handleSearchSubmit(e) {
     e.preventDefault();
     this.props.updateFilter("city", this.state.city);
+    hashHistory.push("/search");
+    this.setState({["city"]: ""})
   }
 
   render() {

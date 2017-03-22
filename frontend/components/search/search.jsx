@@ -10,7 +10,7 @@ class Search extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchRooms();
+    this.props.fetchRooms(this.props.filters);
   }
 
   render() {

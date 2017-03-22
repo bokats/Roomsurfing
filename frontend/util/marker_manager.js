@@ -6,7 +6,11 @@ class MarkerManager {
   }
 
   updateMarkers(rooms) {
+    // if (rooms instanceof Array) {
+    //   this.rooms = rooms;
+    // } else {
     this.rooms = Object.keys(rooms).map(id => rooms[id]);
+  // }
     this._roomsToAdd().forEach(this._createMarkerFromRoom);
   }
 
