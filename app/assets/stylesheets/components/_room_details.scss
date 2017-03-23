@@ -1,9 +1,10 @@
 .room-details-main {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  min-height: 100%;
   color: #27374c;
   background-color: #f1efea;
+  justify-content: space-around;
 }
 
 .room-details {
@@ -16,6 +17,7 @@
 .room-details-title-container {
   text-align: center;
   padding: 20px;
+  margin-left: 20px;
 }
 
 .room-details-image {

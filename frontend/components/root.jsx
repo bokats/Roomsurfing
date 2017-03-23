@@ -8,6 +8,7 @@ import DashboardContainer from "./dashboard/dashboard_container";
 import BookingFormContainer from './bookings/booking_form_container';
 import SearchContainer from "./search/search_container";
 import RoomDetailsContainer from './room_details/room_details_container';
+import ReviewFormContainer from './reviews/review_form_container';
 
 const Root = ({ store }) => {
 
@@ -49,7 +50,10 @@ const Root = ({ store }) => {
         <Route path="/search" component={ SearchContainer }
           onEnter={_redirectIfNotLoggedIn}/>
         <Route path="/rooms/:roomId" component={RoomDetailsContainer}
-          onEnter={_redirectIfNotLoggedIn}/>
+          onEnter={_redirectIfNotLoggedIn}>
+          <Route path="/reviews/:reviewId" component={ReviewFormContainer}
+            onEnter={_redirectIfNotLoggedIn}/>
+        </Route>
         <Route path="rooms/:roomId/book" component={BookingFormContainer}
           onEnter={_redirectIfNotLoggedIn}/>
       </Route>

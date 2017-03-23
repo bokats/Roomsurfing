@@ -27,6 +27,8 @@ class Room < ApplicationRecord
   foreign_key: :host_id,
   class_name: :User
 
+  has_many :reviews
+
   def valid_dates?
     if avail_start > avail_end
       errors.add(:start_date, "cannot be after end date")
