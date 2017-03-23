@@ -1,43 +1,46 @@
 .room-details-main {
   display: flex;
   flex-direction: row;
-  min-height: 100%;
   color: #27374c;
   background-color: #f1efea;
   justify-content: space-around;
+  min-height: 100%;
+}
+
+.room-details-container {
+  display: flex;
+  width: 40%;
+  min-width: 400px;
+  margin-left: 2%;
+  margin-right: 1%;
+  align-items: flex-start;
 }
 
 .room-details {
   display: flex;
-  // border: 1px solid red;
   flex-direction: column;
   background-color: white;
+  width: 100%;
 }
 
 .room-details-title-container {
-  text-align: center;
-  padding: 20px;
-  margin-left: 20px;
-}
 
-.room-details-image {
-  width: 860px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .room-details-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  // border: 1px solid green;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 5%;
 }
 
 .room-details-info {
   display: flex;
   flex-direction: column;
-  margin-left: 80px;
-  // border: 1px solid blue;
   align-items: center;
   font-weight: bold;
 }
@@ -53,7 +56,6 @@
   font-weight: bold;
   line-height: 1.5;
   padding: 8px 12px;
-  margin-right: 80px;
   cursor: pointer;
   text-align: center;
 }
@@ -69,7 +71,5 @@
 }
 
 .room-details-description {
-  // border: 1px solid black;
-  padding-left: 20px;
-  margin-top: 30px;
+  margin-top: 5%;
 }

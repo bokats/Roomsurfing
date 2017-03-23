@@ -1,3 +1,24 @@
+.header {
+  display: flex;
+  height: 60px;
+  border-bottom: 2px solid #bfcad2;
+}
+
+.main-nav {
+  display: flex;
+  align-self: center;
+  flex: auto;
+
+}
+
+.header-search {
+  display: flex;
+  border: 1px solid #aeb5ba;
+  align-items: center;
+  border-radius: 50px;
+  margin-left: 40%;
+}
+
 .signup-button {
   width: 134px;
   height: 22px;
@@ -13,6 +34,7 @@
   white-space: normal;
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   cursor: pointer;
+  margin-left: 63%;
 }
 
 .login-button, .logout-button, .demo-button {
@@ -45,6 +67,7 @@
   text-align: center;
   margin-right: 12px;
   cursor: pointer;
+  margin-left: 12%;
 }
 
 .dashboard-button:hover {
@@ -59,21 +82,6 @@
 
 .login-button:hover, .logout-button:hover, .demo-button:hover {
   background-color: #f2f2f2;
-}
-
-.main-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-self: center;
-  flex: auto;
-}
-
-.header-search {
-  display: flex;
-  border: 1px solid #aeb5ba;
-  margin-right: 250px;
-  align-items: center;
-  border-radius: 50px;
 }
 
 .header-search-label {

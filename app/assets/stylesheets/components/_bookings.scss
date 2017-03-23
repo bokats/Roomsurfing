@@ -5,7 +5,6 @@
 .bookings-index {
   display: flex;
   flex-direction: column;
-  margin-top: 8px;
   background-color: white;
   color: #27374c;
 }
@@ -14,7 +13,6 @@
   display: flex;
   align-items: center;
   height: 66px;
-  // width: 952px;
   border-bottom: 1px solid #bfcad2;
   vertical-align: middle;
   padding-left: 20px;
@@ -65,7 +63,6 @@
 
 .booking-buttons {
   display: flex;
-  // border: 1px solid green;
   flex-direction: column;
   margin-right: 20px;
   justify-content: space-between;
