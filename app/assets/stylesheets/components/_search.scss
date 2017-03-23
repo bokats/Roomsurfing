@@ -112,3 +112,34 @@
   margin-left: 20px;
   text-align: center;
 }
+
+.no-rooms-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.no-rooms, {
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+  color: #929dad;
+  justify-content: center;
+  background-color: #fbfcfc;
+}
+
+.suggested-cities {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40%;
+  padding-top: 5%;
+  color: #929dad;
+  border-bottom: 1px solid #bfcad2;
+  background-color: #fbfcfc;
+  padding-bottom: 5%;
+}
+
+.suggested-cities li {
+  margin-left: 6%;
+  margin-top: 2%;
+}

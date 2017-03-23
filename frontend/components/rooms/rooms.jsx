@@ -24,8 +24,19 @@ class Rooms extends React.Component {
         </ul>);
     } else {
       roomsContent = (
-        <div className="no-rooms">
-          <p>There are no available rooms</p>
+        <div className="no-rooms-container">
+          <div className="no-rooms">
+            <p>There are no available rooms</p>
+          </div>
+          <ul className="suggested-cities"> Suggested cities:
+            <li>San Francisco</li>
+            <li>Los Angeles</li>
+            <li>New York</li>
+            <li>Paris</li>
+            <li>Rio de Janeiro</li>
+            <li>Tokyo</li>
+            <li>Johannesburg</li>
+          </ul>
         </div>);
     }
 
