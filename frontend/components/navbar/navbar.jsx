@@ -52,15 +52,22 @@ class NavBar extends React.Component {
     e.preventDefault();
     this.props.updateFilter("city", this.state.city);
 
-    fetchMapCenter(this.state.city).then(res =>
+    if (this.state.city === "") {
       this.props.updateFilter('mapCenter', {
-        center: { lat: res.results[0].geometry.location.lat,
-                  lng: res.results[0].geometry.location.lng},
-        zoom: 12
-      }));
+        center: { lat: 37.7758, lng: -122.435 },
+        zoom: 2
+      });
+    } else {
+      fetchMapCenter(this.state.city).then(res =>
+        this.props.updateFilter('mapCenter', {
+          center: { lat: res.results[0].geometry.location.lat,
+                    lng: res.results[0].geometry.location.lng},
+          zoom: 12
+        }));
+    }
+
     hashHistory.push("/search");
     this.setState({["city"]: ""});
-
   }
 
   render() {

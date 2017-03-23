@@ -3,9 +3,10 @@ class Api::RoomsController < ApplicationController
   before_action :require_logged_in
 
   def index
-    if params[:endDate]
+    if params[:endDate] && params[:city] != ""
       @rooms = Room.where("booked = false").where("city = ?", params[:city]).
-        where("avail_start > ?", params[:startDate]).where("avail_end < ?", params[:endDate])
+        where("avail_start > ?", params[:startDate]).
+        where("avail_end < ?", params[:endDate])
     else
       @rooms = Room.where("booked = false")
     end

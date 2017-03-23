@@ -5,18 +5,13 @@ import { withRouter } from 'react-router';
 
 class Map extends React.Component {
   componentDidMount() {
-    const mapOptions = {
-      center: { lat: 37.7758, lng: -122.435 },
-      zoom: 12
-    };
 
-    this.map = new google.maps.Map(this.mapNode, mapOptions);
+    this.map = new google.maps.Map(this.mapNode, this.props.filters.mapCenter);
     this.MarkerManager = new MarkerManager(this.map);
     console.log(this.map);
   }
 
   componentWillReceiveProps(newProps) {
-    console.log(newProps);
     if (this.props.filters.city === "San Francisco" ||
       this.props.rooms !== newProps.rooms) {
       this.MarkerManager.updateMarkers(newProps.rooms);
@@ -24,6 +19,7 @@ class Map extends React.Component {
 
     if (this.props.filters.mapCenter !== newProps.mapCenter) {
       this.map.panTo(newProps.filters.mapCenter.center);
+      this.map.setZoom(newProps.filters.mapCenter.zoom);
     }
   }
 

@@ -15,12 +15,12 @@ if (month < 10) {
 }
 
 const _defaultFilters = Object.freeze({
-  city: "San Francisco",
+  city: "",
   startDate: `${year}-${month}-${day}`,
   endDate: `${year + 1}-${month}-${day}`,
   mapCenter: {
     center: { lat: 37.7758, lng: -122.435 },
-    zoom: 12
+    zoom: 2
   }
 });
 
