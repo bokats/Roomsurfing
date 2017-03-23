@@ -5,15 +5,9 @@ import { withRouter } from 'react-router';
 import { fetchRooms } from '../../actions/rooms_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  let rooms = state.rooms;
-  if (ownProps.params.roomId) {
-    const correctRoom = state.rooms[ownProps.params.roomId];
-    rooms = {
-      [correctRoom.id]: correctRoom
-    };
-  }
+
   return {
-    rooms: rooms,
+    rooms: state.rooms,
     filters: state.filters
   };
 };

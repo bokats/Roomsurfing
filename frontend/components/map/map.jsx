@@ -8,13 +8,16 @@ class Map extends React.Component {
 
     this.map = new google.maps.Map(this.mapNode, this.props.filters.mapCenter);
     this.MarkerManager = new MarkerManager(this.map);
-    console.log(this.map);
   }
 
   componentWillReceiveProps(newProps) {
-    if (this.props.filters.city === "San Francisco" ||
-      this.props.rooms !== newProps.rooms) {
-      this.MarkerManager.updateMarkers(newProps.rooms);
+    if (this.props.rooms !== newProps.rooms) {
+      if (!this.props.params.roomId) {
+        this.MarkerManager.updateMarkers(newProps.rooms);
+      } else {
+        this.MarkerManager.updateMarkers({[this.props.params.roomId]:
+          newProps.rooms[this.props.params.roomId]});
+      }
     }
 
     if (this.props.filters.mapCenter !== newProps.mapCenter) {

@@ -1,14 +1,35 @@
 import React from 'react';
 import BookingItem from './booking_item';
 import { Link, hashHistory } from 'react-router';
+import { fetchMapCenter } from "../../util/map_api_util";
 
 class Bookings extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSearchButton = this.handleSearchButton.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchBookings();
+  }
+
+  handleSearchButton(e) {
+    e.preventDefault();
+    hashHistory.push("/search");
+    if (this.props.filters.city === "") {
+      this.props.updateFilter('mapCenter', {
+        center: { lat: 37.7758, lng: -122.435 },
+        zoom: 2
+      });
+    } else {
+      fetchMapCenter(this.props.filters.city).then(res =>
+        this.props.updateFilter('mapCenter', {
+          center: { lat: res.results[0].geometry.location.lat,
+                    lng: res.results[0].geometry.location.lng},
+          zoom: 12
+        }));
+    }
+
   }
 
   render() {
@@ -37,7 +58,7 @@ class Bookings extends React.Component {
         {bookingsContent}
         <section className="booking-index-search">
           <p className="search-link"
-            onClick={() => hashHistory.push("/search")}>
+            onClick={this.handleSearchButton}>
             Search for a Room <i className="fa fa-play"></i>
           </p>
         </section>
