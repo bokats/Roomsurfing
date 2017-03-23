@@ -17,7 +17,11 @@ if (month < 10) {
 const _defaultFilters = Object.freeze({
   city: "San Francisco",
   startDate: `${year}-${month}-${day}`,
-  endDate: `${year + 1}-${month}-${day}`
+  endDate: `${year + 1}-${month}-${day}`,
+  mapCenter: {
+    center: { lat: 37.7758, lng: -122.435 },
+    zoom: 12
+  }
 });
 
 const FiltersReducer = (state = _defaultFilters, action) => {

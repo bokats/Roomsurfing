@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { logout, removeErrors, login } from '../../actions/session_actions';
 import { updateFilter } from "../../actions/filters_actions";
+import { fetchMapCenter } from '../../util/map_api_util';
 import NavBar from './navbar';
 
 const mapStateToProps = state => ({

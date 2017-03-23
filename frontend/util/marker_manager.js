@@ -9,7 +9,6 @@ class MarkerManager {
 
   updateMarkers(rooms) {
     this.rooms = Object.keys(rooms).map(id => rooms[id]);
-    console.log(this.rooms);
     this._roomsToAdd().forEach(this._createMarkerFromRoom);
     this._markersToRemove().forEach(this._removeMarker);
   }

@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { updateRoom } from './util/room_api_util';
+import { fetchMapCenter } from './util/map_api_util';
 
-window.updateRoom = updateRoom;
+window.fetchMapCenter = fetchMapCenter;
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;

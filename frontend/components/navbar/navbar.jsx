@@ -1,5 +1,6 @@
 import React from 'react';
 import { hashHistory, router } from 'react-router';
+import { fetchMapCenter } from '../../util/map_api_util';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -50,8 +51,16 @@ class NavBar extends React.Component {
   handleSearchSubmit(e) {
     e.preventDefault();
     this.props.updateFilter("city", this.state.city);
+
+    fetchMapCenter(this.state.city).then(res =>
+      this.props.updateFilter('mapCenter', {
+        center: { lat: res.results[0].geometry.location.lat,
+                  lng: res.results[0].geometry.location.lng},
+        zoom: 12
+      }));
     hashHistory.push("/search");
-    this.setState({["city"]: ""})
+    this.setState({["city"]: ""});
+
   }
 
   render() {
