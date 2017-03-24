@@ -7,6 +7,10 @@ class Api::RoomsController < ApplicationController
       @rooms = Room.where("booked = false").where("city = ?", params[:city]).
         where("avail_start > ?", params[:startDate]).
         where("avail_end < ?", params[:endDate])
+    elsif params[:endDate]
+      @rooms = Room.where("booked = false").
+        where("avail_start > ?", params[:startDate]).
+        where("avail_end < ?", params[:endDate])
     else
       @rooms = Room.where("booked = false")
     end
