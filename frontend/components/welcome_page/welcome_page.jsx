@@ -16,10 +16,6 @@ class WelcomePage extends React.Component {
     if (!this.props.loggedIn) {
       return (
         <div className="welcome-page">
-          <div className="welcome-image-container">
-            <img className="welcome-image"
-              src="http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490075007/welcome_lnl4nm.jpg"/>
-          </div>
           <div className="welcome-page-message">
             <p className="first-message">
               Stay with Locals and Meet Travelers
