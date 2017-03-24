@@ -123,15 +123,15 @@ Room.create(
   description: "We are students living in a 6-bedroom house in Berkeley who
     want to meet some new fellow travellers. Our living room is available for anyone
     who wants to stay there.",
-  address: "2512 Dana St.",
+  address: "2423 Harrison St",
   avail_start: Date.new(2017, 5, 10),
   avail_end: Date.new(2017, 5, 20),
   image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490152409/sf2_xaytvq.jpg",
   city: "San Francisco",
   host_id: 3,
   booked: false,
-  lat: 37.864373,
-  lng: -122.260692
+  lat: 37.758368,
+  lng: -122.412469
 )
 
 Room.create(
@@ -172,15 +172,15 @@ Room.create(
     are enthusiastic about tennis and want to play with myself and my friends at
     my private court. The room has an excellent view and there is breakfast at the
     house on most days",
-  address: "1812 Vistazo W St",
+  address: "294 Glen Dr",
   avail_start: Date.new(2017, 5, 1),
   avail_end: Date.new(2017, 9, 30),
   image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490154756/sf5_mycbos.jpg",
   city: "San Francisco",
   host_id: 6,
   booked: false,
-  lat: 37.877496,
-  lng: -122.453748
+  lat: 37.857089,
+  lng: -122.489365
 )
 
 Room.create(
