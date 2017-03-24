@@ -4,10 +4,12 @@ import { receiveReviewErrors, removeReviewErrors } from './errors_actions';
 export const RECEIVE_REVIEW = "RECEIVE_REVIEW";
 export const REMOVE_REVIEW = "REMOVE_REVIEW";
 
-export const receiveReview = (review) => ({
-  type: RECEIVE_REVIEW,
-  review
-});
+export const receiveReview = (review) => {
+  return {
+    type: RECEIVE_REVIEW,
+    review
+  };
+};
 
 export const removeReview = (reviewId) => ({
   type: REMOVE_REVIEW,

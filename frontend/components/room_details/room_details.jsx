@@ -33,7 +33,7 @@ class RoomDetails extends React.Component {
       <div className="room-details-main">
         <div className="room-details-container">
           <RoomDetailsInfo roomDetails={this.props.roomDetails}
-            fetchRoomDetails={this.props.fetchRoomDetails}/>
+            fetchRoomDetails={this.props.fetchRoomDetails}/>  
         </div>
         <div className="search-page-right">
           <MapContainer />

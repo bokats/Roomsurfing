@@ -1,10 +1,12 @@
 import { RECEIVE_BOOKING_ERRORS, REMOVE_BOOKING_ERRORS, RECEIVE_ROOM_ERRORS,
-  REMOVE_ROOM_ERRORS } from '../actions/errors_actions';
+  REMOVE_ROOM_ERRORS, RECEIVE_REVIEW_ERRORS, REMOVE_REVIEW_ERRORS }
+  from '../actions/errors_actions';
 import merge from 'lodash/merge';
 
 const _nullErrors = Object.freeze({
   bookings: {},
-  rooms: {}
+  rooms: {},
+  reviews: {}
 });
 
 const ErrorsReducer = (state = _nullErrors, action) => {
@@ -24,6 +26,13 @@ const ErrorsReducer = (state = _nullErrors, action) => {
       return newState;
     case REMOVE_BOOKING_ERRORS:
       newState.bookings = [];
+      return newState;
+    case RECEIVE_REVIEW_ERRORS:
+      const reviewErrors = action.errors;
+      newState.reviews = reviewErrors;
+      return newState;
+    case REMOVE_REVIEW_ERRORS:
+      newState.reviews = [];
       return newState;
     default:
       return state;

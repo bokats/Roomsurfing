@@ -18,8 +18,10 @@ class RoomDetailsInfo extends React.Component {
         <div className="reviews-index">
           {Object.keys(this.props.roomDetails.reviews).map(id => (
             <div className="review" key={id}>
-              <p>Rating: {this.props.roomDetails.reviews[id].rating}</p>
-              <p>Comment: {this.props.roomDetails.reviews[id].comment}</p>
+              <p className="review-author">{this.props.roomDetails.reviews[id].author_first_name} {this.props.roomDetails.reviews[id].author_last_name}</p>
+              <p className="author-city">{this.props.roomDetails.reviews[id].author_city}</p>
+              <p className="review-rating">Rating: {this.props.roomDetails.reviews[id].rating}</p>
+              <p className="review-comment">{this.props.roomDetails.reviews[id].comment}</p>
             </div>
           ))}
         </div>
@@ -63,10 +65,11 @@ class RoomDetailsInfo extends React.Component {
         </p>
         <div className="room-reviews-container">
           <p className="reviews-message">
-            Reviews
+            REVIEWS
           </p>
           {this.renderReviews()}
         </div>
+        <div className='bottom-placeholder'></div>
       </div>);
   }
 }

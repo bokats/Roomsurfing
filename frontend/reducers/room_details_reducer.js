@@ -9,6 +9,7 @@ const RoomDetailsReducer = (state = {}, action) => {
     case RECEIVE_ROOM_DETAILS:
       return action.room;
     case RECEIVE_REVIEW:
+      debugger;
       let newReview = {[action.review.id]: action.review};
       let newReviews = merge({}, state.reviews, newReview);
       return merge({}, state, newReviews);

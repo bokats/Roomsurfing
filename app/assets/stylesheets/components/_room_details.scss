@@ -72,18 +72,62 @@
 
 .room-details-description {
   margin-top: 5%;
+  padding-left: 4%;
+  padding-right: 4%;
 }
 
 .room-reviews-container {
   display: flex;
-  border: 1px solid black;
   margin-top: 3%;
   flex-direction: column;
+  // height: 100px;
 }
 
 .reviews-message {
-  border: 1px solid red;
+  display: flex;
+  border-bottom: 1px solid #bfcad2;
+  border-top: 1px solid #bfcad2;
   text-align: center;
   font-weight: bold;
+  font-size: 16px;
+  height: 65px;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+}
+
+.review-index {
+  margin-bottom: 2%;
+  // margin-bottom: 20px;
+}
+
+.review {
+  padding-left: 4%;
+  margin-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #bfcad2;
+  // border: 1px solid red;
+
+}
+
+.review-author {
+  font-weight: bold;
   font-size: 20px;
+}
+
+.author-city {
+  margin-top: 1%;
+}
+
+.review-rating {
+  margin-top: 4%;
+}
+
+.review-comment {
+  margin-top: 4%;
+}
+
+.bottom-placeholder {
+  height: 20px;
+  background-color: #f1efea;
 }

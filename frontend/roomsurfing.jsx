@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchMapCenter } from './util/map_api_util';
+import { createReview } from './util/review_api_util';
 
-window.fetchMapCenter = fetchMapCenter;
+window.createReview = createReview;
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;

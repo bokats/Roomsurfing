@@ -50,10 +50,11 @@ const Root = ({ store }) => {
         <Route path="/search" component={ SearchContainer }
           onEnter={_redirectIfNotLoggedIn}/>
         <Route path="/rooms/:roomId" component={RoomDetailsContainer}
-          onEnter={_redirectIfNotLoggedIn}>
-          <Route path="/reviews/:reviewId" component={ReviewFormContainer}
-            onEnter={_redirectIfNotLoggedIn}/>
-        </Route>
+          onEnter={_redirectIfNotLoggedIn}/>
+        <Route path="/rooms/:roomId/reviews/:reviewId/edit" component={ReviewFormContainer}
+          onEnter={_redirectIfNotLoggedIn}/>
+        <Route path="/rooms/:roomId/reviews/new" component={ReviewFormContainer}
+          onEnter={_redirectIfNotLoggedIn}/>
         <Route path="rooms/:roomId/book" component={BookingFormContainer}
           onEnter={_redirectIfNotLoggedIn}/>
       </Route>

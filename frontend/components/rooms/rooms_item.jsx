@@ -5,6 +5,7 @@ class RoomItem extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
+    this.handleReviewClick = this.handleReviewClick.bind(this);
   }
 
   handleClick(e) {
@@ -12,16 +13,20 @@ class RoomItem extends React.Component {
     hashHistory.push(`/rooms/${this.props.room.id}`);
   }
 
+  handleReviewClick(e) {
+    e.preventDefault();
+    hashHistory.push(`/rooms/${this.props.room.id}/reviews/new`)
+  }
+
   render() {
 
     return (
-    <div className='room-item-container'
-      onClick={this.handleClick}>
-      <div className='room-item-content'>
-        <div className='room-item-image'>
+    <div className='room-item-container'>
+      <div className='room-item-content' >
+        <div className='room-item-image' onClick={this.handleClick}>
           <img src={this.props.room.image_url}  width="100%"></img>
         </div>
-        <div className='room-item-info'>
+        <div className='room-item-info' onClick={this.handleClick}>
           <p className="room-host-name">
             Hosted by: {this.props.room.host_first_name} {this.props.room.host_last_name}
           </p>
@@ -39,8 +44,12 @@ class RoomItem extends React.Component {
             </li>
           </ul>
         </div>
+        <button className="review-button"
+          onClick={this.handleReviewClick}>
+          Review
+        </button>
       </div>
-      <div className="room-item-description">
+      <div className="room-item-description" onClick={this.handleClick}>
         {this.props.room.description}
       </div>
     </div>);

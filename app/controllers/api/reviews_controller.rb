@@ -15,7 +15,9 @@ class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.author_id = @current_user.id
-    unless @review.save
+    if @review.save
+      render :show
+    else
       render(json: ["Please input rating and/or comment"], status: 422)
     end
   end

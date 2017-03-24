@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import ReviewForm from './review_form';
-import { createReview, updateReview } from '../../actions/reviews_actions';
+import { fetchReview, createReview, updateReview } from '../../actions/reviews_actions';
+import { removeReviewErrors } from '../../actions/errors_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let review = {rating: 1, comment: ""};
@@ -21,7 +22,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   }
 
   return {
-    action: (roomId, review) => dispatch(action(roomId, review))
+    action: (roomId, review) => dispatch(action(roomId, review)),
+    fetchReview: (roomId, reviewId) => dispatch(fetchReview(roomId, reviewId)),
+    removeReviewErrors: () => dispatch(removeReviewErrors())
   };
 };
 
