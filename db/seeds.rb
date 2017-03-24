@@ -9,6 +9,7 @@
 User.delete_all
 Room.delete_all
 Booking.delete_all
+Review.delete_all
 
 User.create(username: "guest@gmail.com", password: "password",
   first_name: "Guest", last_name: "User", home_city: "San Francisco, CA")
@@ -267,30 +268,30 @@ Room.create(
   description: "I have one available room in my 4-bedroom house that is available
     for the 4th of July weekend. If you like meeting new random people and staying for
     free, this is your place",
-  address: "18092 Debi Ln",
+  address: "1132 Green St",
   avail_start: Date.new(2017, 6, 30),
   avail_end: Date.new(2017, 7, 5),
   image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163352/la1_eebqa2.jpg",
   city: "Los Angeles",
   host_id: 12,
   booked: false,
-  lat: 33.895262,
-  lng: -117.81801300000001
+  lat: 34.131422,
+  lng: -118.240371
 )
 
 Room.create(
-  title: "Available guestroom in Studio City",
+  title: "Available guestroom in Monterey Park",
   description: "Guestroom available in a 6-bedroom house. We have two dogs and a cat and
     there will be breakfast provided.",
-  address: "11525 Laurelcrest Dr",
+  address: "304 Russell Ave",
   avail_start: Date.new(2017, 6, 3),
   avail_end: Date.new(2017, 7, 5),
   image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163353/la2_udppou.jpg",
   city: "Los Angeles",
   host_id: 13,
   booked: false,
-  lat: 34.1368744,
-  lng: -118.38368739999999
+  lat: 34.059434,
+  lng: -118.119508
 )
 
 Room.create(
@@ -326,19 +327,19 @@ Room.create(
 )
 
 Room.create(
-  title: "Available room, perfect for college student",
+  title: "Available room, downtown Los Angeles",
   description: "The room is on the second floor of a 4-bedroom loft shared with
     3 other roommates who all go to UCLA. It will be avaible during the final weeks of school at UCLA
-    and a perfect opportunity to visit the UCLA campus.",
-  address: "506 Glenrock Ave",
+    and a perfect opportunity to visit LA",
+  address: "819 South Santee",
   avail_start: Date.new(2017, 6, 5),
   avail_end: Date.new(2017, 6, 21),
   image_url: "http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163353/la5_yqga0h.jpg",
   city: "Los Angeles",
   host_id: 16,
   booked: false,
-  lat: 34.0680074,
-  lng: -118.45124570000002
+  lat: 34.041159,
+  lng: -118.252285
 )
 
 Room.create(
@@ -621,6 +622,93 @@ Booking.create(
   room_id: 17
 )
 
+Review.create(
+  rating: 5,
+  comment: "I highly recommend this room. I stayed
+    there in November 2016 for 2 days and the location is almost perfect.
+    The host is also very friendly and likes to have a chat about
+    interesting stories.",
+  author_id: 24,
+  room_id: 1
+)
+
+Review.create(
+  rating: 5,
+  comment: "You can't ask for more when visiting San Francisco and not
+    paying any money for your room. The hosts had incredible stories from
+    travel journeys. The room was also very clean.",
+  author_id: 12,
+  room_id: 1
+)
+
+Review.create(
+  rating: 4,
+  comment: "Very big room and big widnow and gets a lot of light. Also close
+    to a lot of restaurants and bars in the Mission District.",
+  author_id: 15,
+  room_id: 2
+)
+
+Review.create(
+  rating: 5,
+  comment: "Absolutely incredible guesthouse and great hosts. I am really lucky
+    to have had the opportunity to stay there. Highly recommend to anyone visiting
+    San Francisco",
+  author_id: 9,
+  room_id: 3
+)
+
+Review.create(
+  rating: 2,
+  comment: "Too far from the city center. If you are there for a couple of
+    days, try to stay somewhere closer to Champs-Elysees",
+  author_id: 19,
+  room_id: 17
+)
+
+Review.create(
+  rating: 1,
+  comment: "The room was clean, but I didn't feel the neighborhood was safe.
+    Try to stay away",
+  author_id: 25,
+  room_id: 11
+)
+
+Review.create(
+  rating: 5,
+  comment: "This is what Roomsurfing is all about. Not only was my room free,
+    but the hosts were extremely friendly and we shares some travel stories. Can
+    you believe they climbed Mt. Everest a couple of years ago..",
+  author_id: 28,
+  room_id: 12
+)
+
+Review.create(
+  rating: 5,
+  comment: "This is what Roomsurfing is all about. Not only was my room free,
+    but the hosts were extremely friendly and we shares some travel stories. Can
+    you believe they climbed Mt. Everest a couple of years ago..",
+  author_id: 28,
+  room_id: 12
+)
+
+Review.create(
+  rating: 1,
+  comment: "Avoid at any cost. I stayed there one night and it was really dirty
+    and I even think there were some rats. This listing should be removed from
+    Roomsurfing",
+  author_id: 4,
+  room_id: 9
+)
+
+Review.create(
+  rating: 1,
+  comment: "If you are looking for an authentic Japanese experience, try to
+    stay with Ken. He is an amazing host, took me around the city and showed me
+    spots I would never have known by myself.",
+  author_id: 11,
+  room_id: 23
+)
 
 r1 = Room.find(1)
 r2 = Room.find(8)

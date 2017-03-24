@@ -5,6 +5,7 @@ class RoomDetailsInfo extends React.Component {
   constructor(props) {
     super(props);
     this.handleBook = this.handleBook.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   handleBook(e) {
@@ -12,18 +13,57 @@ class RoomDetailsInfo extends React.Component {
     hashHistory.push(`/rooms/${this.props.roomDetails.id}/book`);
   }
 
+  handleDelete(reviewId) {
+    return e => {
+      e.preventDefault();
+      this.props.deleteReview(this.props.roomDetails.id, reviewId);
+    };
+  }
+
   renderReviews() {
+
+    let deleteButton = (
+      <button className="delete-review-button">
+      </button>
+    );
+
     if (this.props.roomDetails.reviews) {
+      debugger;
       return (
         <div className="reviews-index">
-          {Object.keys(this.props.roomDetails.reviews).map(id => (
-            <div className="review" key={id}>
-              <p className="review-author">{this.props.roomDetails.reviews[id].author_first_name} {this.props.roomDetails.reviews[id].author_last_name}</p>
-              <p className="author-city">{this.props.roomDetails.reviews[id].author_city}</p>
-              <p className="review-rating">Rating: {this.props.roomDetails.reviews[id].rating}</p>
-              <p className="review-comment">{this.props.roomDetails.reviews[id].comment}</p>
-            </div>
-          ))}
+          {Object.keys(this.props.roomDetails.reviews).map(id => {
+            if (this.props.currentUser &&
+              this.props.roomDetails.reviews[id].author_id === this.props.currentUser.id) {
+              return (
+              <div className="review" key={id}>
+                <div className="review-content">
+                  <div className="review-info">
+                    <p className="review-author">{this.props.roomDetails.reviews[id].author_first_name} {this.props.roomDetails.reviews[id].author_last_name}</p>
+                    <p className="author-city">{this.props.roomDetails.reviews[id].author_city}</p>
+                    <p className="review-rating">Rating: {this.props.roomDetails.reviews[id].rating}</p>
+                    <p className="review-comment">{this.props.roomDetails.reviews[id].comment}</p>
+                  </div>
+                  <button className="delete-review-button"
+                    onClick={this.handleDelete(this.props.roomDetails.reviews[id].id)}>
+                      Delete
+                  </button>
+                </div>
+              </div>);
+            } else {
+              return (
+                <div className="review" key={id}>
+                  <div className="review-content">
+                    <div className="review-info">
+                      <p className="review-author">{this.props.roomDetails.reviews[id].author_first_name} {this.props.roomDetails.reviews[id].author_last_name}</p>
+                      <p className="author-city">{this.props.roomDetails.reviews[id].author_city}</p>
+                      <p className="review-rating">Rating: {this.props.roomDetails.reviews[id].rating}</p>
+                      <p className="review-comment">{this.props.roomDetails.reviews[id].comment}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+          })}
         </div>
       );
     }

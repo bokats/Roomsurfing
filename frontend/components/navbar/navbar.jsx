@@ -71,10 +71,18 @@ class NavBar extends React.Component {
   }
 
   render() {
+    let logo = (
+      <div className="logo-container">
+        <p className="logo-text">Roomsurfing</p>
+      </div>
+    );
+
+
     if (this.props.currentUser) {
       return (
 
         <nav className="main-nav">
+          {logo}
           <form className="header-search">
             <label className="header-search-label"> Find Rooms
               <input className="search-input"
@@ -97,6 +105,7 @@ class NavBar extends React.Component {
     );} else {
       return (
         <nav className="main-nav">
+          {logo}
           <button className="signup-button"
             onClick={this.handleSignUpClick}>Join</button>
           <button className="login-button"
