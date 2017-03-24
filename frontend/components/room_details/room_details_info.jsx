@@ -12,6 +12,21 @@ class RoomDetailsInfo extends React.Component {
     hashHistory.push(`/rooms/${this.props.roomDetails.id}/book`);
   }
 
+  renderReviews() {
+    if (this.props.roomDetails.reviews) {
+      return (
+        <div className="reviews-index">
+          {Object.keys(this.props.roomDetails.reviews).map(id => (
+            <div className="review" key={id}>
+              <p>Rating: {this.props.roomDetails.reviews[id].rating}</p>
+              <p>Comment: {this.props.roomDetails.reviews[id].comment}</p>
+            </div>
+          ))}
+        </div>
+      );
+    }
+  }
+
   render() {
     return (
       <div className="room-details">
@@ -46,6 +61,12 @@ class RoomDetailsInfo extends React.Component {
         <p className="room-details-description">
           {this.props.roomDetails.description}
         </p>
+        <div className="room-reviews-container">
+          <p className="reviews-message">
+            Reviews
+          </p>
+          {this.renderReviews()}
+        </div>
       </div>);
   }
 }

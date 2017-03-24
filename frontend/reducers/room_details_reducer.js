@@ -8,10 +8,14 @@ const RoomDetailsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ROOM_DETAILS:
       return action.room;
-    // case RECEIVE_REVIEW:
-    //   let newState = merge({}, state);
-    //   const newReview = {[action.review.id]: action.review};
-    //   const newRoom = merge({}, state.)
+    case RECEIVE_REVIEW:
+      let newReview = {[action.review.id]: action.review};
+      let newReviews = merge({}, state.reviews, newReview);
+      return merge({}, state, newReviews);
+    case REMOVE_REVIEW:
+      let newState = merge({}, state);
+      delete newState["reviews"][action.reviewId];
+      return newState;
     default:
       return state;
   }
