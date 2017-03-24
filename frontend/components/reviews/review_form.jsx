@@ -55,7 +55,6 @@ class ReviewForm extends React.Component {
         comment: this.state.comment,
         room_id: this.props.params.roomId
       };
-      debugger;
       this.props.action(newReview.room_id, newReview).then(() =>
         hashHistory.push(`/rooms/${this.props.params.roomId}`));
     } else {

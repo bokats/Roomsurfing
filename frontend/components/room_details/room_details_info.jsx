@@ -28,7 +28,6 @@ class RoomDetailsInfo extends React.Component {
     );
 
     if (this.props.roomDetails.reviews) {
-      debugger;
       return (
         <div className="reviews-index">
           {Object.keys(this.props.roomDetails.reviews).map(id => {
