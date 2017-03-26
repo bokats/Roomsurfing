@@ -57,6 +57,6 @@ Make the search bar smarter and add auto complete feature to make the user exper
 
 Ability of user to post a room so he/she can host other people
 
-### sMessaging
+### Messaging
 
 Allow for messaging between users
