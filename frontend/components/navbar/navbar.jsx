@@ -72,9 +72,9 @@ class NavBar extends React.Component {
 
   render() {
     let logo = (
-      <div className="logo-container">
-        <p className="logo-text">Roomsurfing</p>
-      </div>
+      <button className="logo-container">
+        <img src="http://res.cloudinary.com/dmhxtvnmi/image/upload/v1492296077/Screenshot_from_2017-04-14_12-13-34_w0yd80.png"></img>
+      </button>
     );
 
 

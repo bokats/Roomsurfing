@@ -40,7 +40,6 @@ class User < ApplicationRecord
   end
 
   def reset_session_token!
-    p "resetting session token"
     begin
       token = SecureRandom.base64
     end while User.exists?(session_token: token)
