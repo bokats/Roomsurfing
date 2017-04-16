@@ -20,9 +20,14 @@ class BookingForm extends React.Component {
   }
 
   renderErrors() {
+    let errors = this.props.errors;
+    if (this.props.errors[0] && this.props.errors[0].includes(".")) {
+      errors = this.props.errors[0].split(".");
+    }
+
     return(
       <ul className="booking-form-errors">
-        {this.props.errors.map((error, i) => (
+        {errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
           </li>

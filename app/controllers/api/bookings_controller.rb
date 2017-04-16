@@ -18,7 +18,8 @@ class Api::BookingsController < ApplicationController
     if @booking.save
       render :show
     else
-      render(json: ["Invalid dates. Please enter the dates again"], status: 422)
+      room = Room.find(booking_params[:room_id])
+      render(json: ["Room not available for these dates. Available dates: #{room.avail_start} to #{room.avail_end}"], status: 422)
     end
   end
 
