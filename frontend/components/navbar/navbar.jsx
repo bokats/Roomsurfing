@@ -10,6 +10,7 @@ class NavBar extends React.Component {
 		this.handleLogOutClick = this.handleLogOutClick.bind(this);
     this.handleGuestClick = this.handleGuestClick.bind(this);
     this.handleDashboardButton = this.handleDashboardButton.bind(this);
+    this.handleSearchButton = this.handleSearchButton.bind(this);
     this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
     this.state = this.props.filters;
   }
@@ -40,6 +41,11 @@ class NavBar extends React.Component {
   handleDashboardButton(e) {
     e.preventDefault();
     hashHistory.push('/');
+  }
+
+  handleSearchButton(e) {
+    e.preventDefault();
+    hashHistory.push('/search');
   }
 
   handleFilterChange(filter) {
@@ -95,8 +101,11 @@ class NavBar extends React.Component {
               </button>
             </label>
           </form>
+
           <button className="dashboard-button"
             onClick={this.handleDashboardButton}>Dashboard</button>
+          <button className="search-button"
+            onClick={this.handleSearchButton}>Search</button>
           <button className="logout-button" onClick={this.handleLogOutClick}>
             Log Out</button>
         </nav>
