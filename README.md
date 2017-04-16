@@ -22,13 +22,32 @@ latitude of the address. The host is linked to the user database through an
 association.
 
 Upon logging into the app, the user is taken to the dashboard screen, which has a
-search bar on top and, a "Search for a Room" link along with any bookings the user already has. The
+search bar on top and, a "Search for a Room" link along with any bookings the user already has. The dashboard displays all the bookings for the specific user. It also allows the user to make changes or cancel the bookings. The app also has extra functionality to put the room back into available rooms once a user has canceled. Below is a snippet of
 
 ![alt-tag](./app/assets/images/dashboard.png)
 
 The search bar allows the user to directly specify which city he/she wants to go to, while the link gives the user all the available rooms at the time. Once a specific city is submitted in the search bar, the back end fires up a SQL query to fetch the specific rooms for that city.
 
+```
+handleEditClick(id) {
+  return e => {
+    e.preventDefault();
+    const url = `/bookings/${id}/edit`;
+    hashHistory.push(url);
+  };
+}
 
+handleDeleteClick() {
+  return e => {
+    e.preventDefault();
+    const room = {
+      id: this.props.booking.room_id,
+      booked: false};
+    this.props.deleteBooking(this.props.booking.id)
+     .then(() => this.props.updateRoom(room));
+  };
+}
+```
 
 The page that shows the search results is separated into two main components: a room index and a map. The room index component allows for dynamic filtering of rooms by
 available dates without having to press any keys or click any buttons.
