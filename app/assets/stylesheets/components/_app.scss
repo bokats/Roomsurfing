@@ -37,7 +37,7 @@ html, body, #root {
   display: flex;
   margin: 0 auto;
   margin-top: 15%;
-  color: #27374c;
+  color: white;
   flex-direction: column;
   align-items: center;
 }
@@ -47,7 +47,7 @@ html, body, #root {
   background-size: cover;
   position: absolute;
   z-index: -1000;
-  background: url("http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490075007/welcome_lnl4nm.jpg")
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("http://res.cloudinary.com/dmhxtvnmi/image/upload/v1490075007/welcome_lnl4nm.jpg")
   center center;
 }
 
@@ -55,6 +55,7 @@ html, body, #root {
   font-size: 56px;
   line-height: 1.1;
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
 }
 
 .second-message {
@@ -62,4 +63,5 @@ html, body, #root {
   font-size: 24px;
   line-height: 1.1;
   margin-top: 8px;
+  font-weight: 400;
 }
