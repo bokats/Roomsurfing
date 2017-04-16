@@ -2,7 +2,7 @@
 
 [Roomsurfing live][heroku]
 
-[heroku]: https://www.roomsurfing.herokuapp.com
+[heroku]: https://roomsurfing.herokuapp.com/
 
 Roomsurfing is a full-stack web application inspired by Couchsurfing. Key
 difference is it allows users to search and book entire rooms for free instead
