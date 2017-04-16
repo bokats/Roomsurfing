@@ -55,6 +55,7 @@ class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.removeBookingErrors();
     if (this.props.formType === "new") {
       let newBooking = {
       arrival_date: this.state.arrival_date,
@@ -84,6 +85,7 @@ class BookingForm extends React.Component {
   render() {
     let headerText = this.props.formType === "new" ? "Book this room" :
       "Edit my booking";
+
     return (
       <section className="booking-form-container-parent">
         <section className="booking-form-container">

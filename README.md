@@ -1,14 +1,14 @@
 # Roomsurfing
 
-[Roomsurfing live][heroku] **NB:** This should be a link to your production site
+[Roomsurfing live][heroku]
 
-[heroku]: http://www.roomsurfing.herokuapp.com
+[heroku]: https://www.roomsurfing.herokuapp.com
 
 Roomsurfing is a full-stack web application inspired by Couchsurfing. Key
 difference is it allows users to search and book entire rooms for free instead
 of couches or space.
 
-Roomsurfing utilizes Ruby on Rails on the backend, a PostgreSQL database, and React.js with a Redux architectural framework on the frontend.  
+Roomsurfing utilizes Ruby on Rails on the backend, a PostgreSQL database, React.js with a Redux architectural framework on the frontend, and  Google Maps API.
 
 ## Features & Implementation
 
@@ -22,8 +22,13 @@ latitude of the address. The host is linked to the user database through an
 association.
 
 Upon logging into the app, the user is taken to the dashboard screen, which has a
-search bar on top and, a "Search for a Room" link along with any bookings the user already has. The search bar allows the user to directly specify which city he/she wants to go to, while the link gives the user
-all the available rooms at the time. Once a specific city is submitted in the search bar, the backend fires up a SQL query to fetch the specific rooms for that city.
+search bar on top and, a "Search for a Room" link along with any bookings the user already has. The
+
+![alt-tag](./app/assets/images/dashboard.png)
+
+The search bar allows the user to directly specify which city he/she wants to go to, while the link gives the user all the available rooms at the time. Once a specific city is submitted in the search bar, the back end fires up a SQL query to fetch the specific rooms for that city.
+
+
 
 The page that shows the search results is separated into two main components: a room index and a map. The room index component allows for dynamic filtering of rooms by
 available dates without having to press any keys or click any buttons.

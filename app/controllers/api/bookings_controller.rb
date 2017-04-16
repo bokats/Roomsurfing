@@ -29,7 +29,8 @@ class Api::BookingsController < ApplicationController
       @current_user.id == @booking.traveller_id
       render :show
     else
-      render(json: ["Invalid information"], status: 422)
+      room = Room.find(@booking.room_id)
+      render(json: ["Room not available for these dates. Available dates: #{room.avail_start} to #{room.avail_end}"], status: 422)
     end
   end
 
