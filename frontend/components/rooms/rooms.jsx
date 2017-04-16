@@ -26,7 +26,7 @@ class Rooms extends React.Component {
       roomsContent = (
         <div className="no-rooms-container">
           <div className="no-rooms">
-            <p>There are no available rooms</p>
+            <p>There are no available rooms for this city and/or dates</p>
           </div>
           <ul className="suggested-cities"> Suggested cities:
             <li>San Francisco</li>
