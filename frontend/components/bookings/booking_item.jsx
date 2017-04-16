@@ -7,7 +7,7 @@ class BookingItem extends React.Component {
     this.handleEditClick = this.handleEditClick.bind(this);
   }
 
-  ```
+
   handleEditClick(id) {
     return e => {
       e.preventDefault();
@@ -26,7 +26,6 @@ class BookingItem extends React.Component {
        .then(() => this.props.updateRoom(room));
     };
   }
-  ```
 
   render() {
     let traveller = "traveler";
