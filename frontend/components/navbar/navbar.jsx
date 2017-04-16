@@ -56,7 +56,23 @@ class NavBar extends React.Component {
 
   handleSearchSubmit(e) {
     e.preventDefault();
-    this.props.updateFilter("city", this.state.city);
+
+    let lowerCaseCity = this.state.city.toLowerCase();
+
+    let capitalizedCity = "";
+    if (lowerCaseCity.includes(" de ")) {
+      capitalizedCity = "Rio de Janeiro";
+    } else if (lowerCaseCity === "sf" || lowerCaseCity === 'san fran') {
+      capitalizedCity = "San Francisco";
+    } else if (lowerCaseCity === 'la') {
+      capitalizedCity = "Los Angeles";
+    } else if (lowerCaseCity === 'ny' || lowerCaseCity === "nyc") {
+      capitalizedCity = "New York";
+    } else {
+      capitalizedCity = this.state.city.replace(/\b\w/g, l => l.toUpperCase());
+    }
+
+    this.props.updateFilter("city", capitalizedCity);
 
     if (this.state.city === "") {
       this.props.updateFilter('mapCenter', {
