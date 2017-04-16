@@ -7,6 +7,7 @@ class BookingForm extends React.Component {
     this.state = this.props.booking;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCancelClick = this.handleCancelClick.bind(this);
+    debugger;
   }
 
   componentDidMount() {
@@ -86,6 +87,10 @@ class BookingForm extends React.Component {
     let headerText = this.props.formType === "new" ? "Book this room" :
       "Edit my booking";
 
+    if (!this.state) {
+      this.state = {arrival_date: "", depart_date: "", num_travellers: ""};
+    }
+    
     return (
       <section className="booking-form-container-parent">
         <section className="booking-form-container">

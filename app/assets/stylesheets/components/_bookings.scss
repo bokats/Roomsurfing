@@ -115,10 +115,13 @@
 
 .booking-form-errors {
   display: flex;
-  background-color: rgba(198, 61, 67, 0.25);
-  color: white;
+  flex-direction: column;
+  color: #3e1214;
   list-style-type: none;
   justify-content: center;
+  background: #F8BBD0;
+  align-items: center;
+  font-weight: bold;
 }
 
 .fa-plane {
