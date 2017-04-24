@@ -15,7 +15,6 @@ Roomsurfing utilizes Ruby on Rails on the backend, a PostgreSQL database, React.
 ### Rooms and Booking Rooms
 
 The main feature of the app is the user can browse and book rooms around the world.
-
 Rooms are stored in the database with the following attributes: id, title,
 description, address, start and end dates, image, city, host and longitude and
 latitude of the address. The host is linked to the user database through an
