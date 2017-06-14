@@ -109,8 +109,8 @@ Room.create(
   description: "A beautiful room available in downtown San Francisco.
     Perfect for short-term visitors to the Bay Area.",
   address: "770 Stockton St",
-  avail_start: Date.new(2017, 6, 10),
-  avail_end: Date.new(2017, 6, 18),
+  avail_start: Date.new(2017, 8, 10),
+  avail_end: Date.new(2017, 8, 18),
   image_url:
    "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490152093/SF1_lspoes.jpg",
   city: "San Francisco",
@@ -125,8 +125,8 @@ Room.create(
     want to meet some new fellow travellers. Our living room is available for anyone
     who wants to stay there.",
   address: "2423 Harrison St",
-  avail_start: Date.new(2017, 5, 10),
-  avail_end: Date.new(2017, 5, 20),
+  avail_start: Date.new(2017, 9, 10),
+  avail_end: Date.new(2017, 9, 20),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490152409/sf2_xaytvq.jpg",
   city: "San Francisco",
   host_id: 3,
@@ -140,8 +140,8 @@ Room.create(
   description: "My wife and I have an unoccupied guesthouse in west San Francisco
     that will be available for the month of July as we will be travelling abroad.",
   address: "787 41st Ave",
-  avail_start: Date.new(2017, 7, 1),
-  avail_end: Date.new(2017, 7, 30),
+  avail_start: Date.new(2017, 8, 1),
+  avail_end: Date.new(2017, 8, 30),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490154082/sf3_ap6qjc.jpg",
   city: "San Francisco",
   host_id: 4,
@@ -157,8 +157,8 @@ Room.create(
     two weeks of my lease. The apartment will be shared with my two roommates who
     work long hours and are generally quiet.",
   address: "45 Lansing St. Apt. 27A",
-  avail_start: Date.new(2017, 6, 12),
-  avail_end: Date.new(2017, 6, 26),
+  avail_start: Date.new(2017, 9, 12),
+  avail_end: Date.new(2017, 9, 26),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490154087/sf4_bn55ic.jpg",
   city: "San Francisco",
   host_id: 5,
@@ -174,8 +174,8 @@ Room.create(
     my private court. The room has an excellent view and there is breakfast at the
     house on most days",
   address: "294 Glen Dr",
-  avail_start: Date.new(2017, 5, 1),
-  avail_end: Date.new(2017, 9, 30),
+  avail_start: Date.new(2017, 8, 1),
+  avail_end: Date.new(2017, 10, 30),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490154756/sf5_mycbos.jpg",
   city: "San Francisco",
   host_id: 6,
@@ -190,8 +190,8 @@ Room.create(
     Perfect for someone visiting NYC for their first time. Close to ACE 123
     subway. The building also has free breakfast and valet service",
   address: "95 Wall St. Apt. 1112",
-  avail_start: Date.new(2017, 6, 4),
-  avail_end: Date.new(2017, 6, 6),
+  avail_start: Date.new(2017, 9, 4),
+  avail_end: Date.new(2017, 9, 6),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163371/ny1_wrlfnc.jpg",
   city: "New York",
   host_id: 7,
@@ -253,8 +253,8 @@ Room.create(
     a fellow female traveller. The apartment is close to a lot of good restauarants and
     bars. We look forward to meeting you and hearing your travel stories",
   address: "104 Thompson St.",
-  avail_start: Date.new(2017, 6, 21),
-  avail_end: Date.new(2017, 6, 25),
+  avail_start: Date.new(2017, 7, 21),
+  avail_end: Date.new(2017, 7, 25),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/ny5_yyn5vv.jpg",
   city: "New York",
   host_id: 11,
@@ -269,8 +269,8 @@ Room.create(
     for the 4th of July weekend. If you like meeting new random people and staying for
     free, this is your place",
   address: "1132 Green St",
-  avail_start: Date.new(2017, 6, 30),
-  avail_end: Date.new(2017, 7, 5),
+  avail_start: Date.new(2017, 7, 30),
+  avail_end: Date.new(2017, 8, 5),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163352/la1_eebqa2.jpg",
   city: "Los Angeles",
   host_id: 12,
@@ -284,8 +284,8 @@ Room.create(
   description: "Guestroom available in a 6-bedroom house. We have two dogs and a cat and
     there will be breakfast provided.",
   address: "304 Russell Ave",
-  avail_start: Date.new(2017, 6, 3),
-  avail_end: Date.new(2017, 7, 5),
+  avail_start: Date.new(2017, 7, 3),
+  avail_end: Date.new(2017, 7, 15),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163353/la2_udppou.jpg",
   city: "Los Angeles",
   host_id: 13,
@@ -332,8 +332,8 @@ Room.create(
     3 other roommates who all go to UCLA. It will be avaible during the final weeks of school at UCLA
     and a perfect opportunity to visit LA",
   address: "819 South Santee",
-  avail_start: Date.new(2017, 6, 5),
-  avail_end: Date.new(2017, 6, 21),
+  avail_start: Date.new(2017, 8, 5),
+  avail_end: Date.new(2017, 8, 21),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163353/la5_yqga0h.jpg",
   city: "Los Angeles",
   host_id: 16,
@@ -348,8 +348,8 @@ Room.create(
     Relatively close to the Louvre the city center if you want to explore. The room can fit multiple people
     and we are also pet friendly. The room is clean and quiet and you also get your own bathroom",
   address: "26 Rue de Trévise",
-  avail_start: Date.new(2017, 6, 1),
-  avail_end: Date.new(2017, 6, 30),
+  avail_start: Date.new(2017, 8, 1),
+  avail_end: Date.new(2017, 8, 30),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p1_f4grwv.jpg",
   city: "Paris",
   host_id: 17,
@@ -381,7 +381,7 @@ Room.create(
     and offer 1 one of our available rooms to do so. The room is fully furnished, with
     a big window keeping things bright at day. It is also cleaned every week",
   address: "147 Rue de Vaugirard",
-  avail_start: Date.new(2017, 6, 10),
+  avail_start: Date.new(2017, 7, 10),
   avail_end: Date.new(2017, 9, 30),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490163372/p3_ksyfmr.jpg",
   city: "Paris",
@@ -415,8 +415,8 @@ Room.create(
     have a great stay in Brazil. The room is clean, has a bed and internet and it is in a safe
     area.",
   address: "R. Gen. Barbosa Lima, 99 - Copacabana",
-  avail_start: Date.new(2017, 6, 10),
-  avail_end: Date.new(2017, 6, 20),
+  avail_start: Date.new(2017, 8, 10),
+  avail_end: Date.new(2017, 8, 20),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217261/rio1_szfe1t.jpg",
   city: "Rio de Janeiro",
   host_id: 21,
@@ -432,8 +432,8 @@ Room.create(
     The room will only be available for non-Brazilians. The room has a bed, but may be load,
     as it is between the bedroom and the apartment entrance. The apartment is also close to the airport",
   address: "R. Cardeal Dom Sebastião Leme, 30 - Santa Teresa",
-  avail_start: Date.new(2017, 6, 30),
-  avail_end: Date.new(2017, 7, 2),
+  avail_start: Date.new(2017, 7, 30),
+  avail_end: Date.new(2017, 8, 2),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217261/rio2_ogt5ts.jpg",
   city: "Rio de Janeiro",
   host_id: 22,
@@ -466,8 +466,8 @@ Room.create(
     and it is close proximity to Tokyo city center. There are many good restaurants
     close by. Come and experience the Japanese culture without paying for hotel.",
   address: "2 Chome-7-11 Hakusan",
-  avail_start: Date.new(2017, 6, 15),
-  avail_end: Date.new(2017, 6, 22),
+  avail_start: Date.new(2017, 7, 15),
+  avail_end: Date.new(2017, 7, 22),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217283/tok1_rmf5ft.jpg",
   city: "Tokyo",
   host_id: 24,
@@ -500,8 +500,8 @@ Room.create(
     anyone visiting Tokyo. We will only accept people under the age of 30. The room is
     clean, has internet free coffee in the morning.",
   address: "1 Chome-8-16 Harumi",
-  avail_start: Date.new(2017, 6, 15),
-  avail_end: Date.new(2017, 6, 22),
+  avail_start: Date.new(2017, 7, 15),
+  avail_end: Date.new(2017, 7, 22),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217283/tok3_hb1v53.jpg",
   city: "Tokyo",
   host_id: 26,
@@ -551,8 +551,8 @@ Room.create(
     visitors. We have hosted a number of people and have great stories to share.
     ",
   address: "63 Lamoen St",
-  avail_start: Date.new(2017, 6, 5),
-  avail_end: Date.new(2017, 6, 20),
+  avail_start: Date.new(2017, 8, 5),
+  avail_end: Date.new(2017, 8, 20),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217246/joh3_p7gfri.jpg",
   city: "Johannesburg",
   host_id: 29,
@@ -586,8 +586,8 @@ Room.create(
     The roommates are both working in theater and like to get breakfast and dinner together.
     ",
   address: "1188 Vallejo St",
-  avail_start: Date.new(2017, 6, 26),
-  avail_end: Date.new(2017, 7, 2),
+  avail_start: Date.new(2017, 8, 26),
+  avail_end: Date.new(2017, 9, 2),
   image_url: "https://res.cloudinary.com/dmhxtvnmi/image/upload/v1490217273/sf7_blq7vu.jpg",
   city: "San Francisco",
   host_id: 31,
@@ -599,8 +599,8 @@ Room.create(
 
 
 Booking.create(
-  arrival_date: Date.new(2017, 6, 10),
-  depart_date: Date.new(2017, 6, 13),
+  arrival_date: Date.new(2017, 8, 12),
+  depart_date: Date.new(2017, 8, 15),
   num_travellers: 1,
   traveller_id: 1,
   room_id: 1
@@ -716,4 +716,4 @@ r3 = Room.find(17)
 #
 r3.update(avail_start: Date.new(2017, 8, 9))
 r2.update(avail_start: Date.new(2017, 8, 13))
-r1.update(avail_start: Date.new(2017, 6, 13))
+r1.update(avail_start: Date.new(2017, 8, 15))
